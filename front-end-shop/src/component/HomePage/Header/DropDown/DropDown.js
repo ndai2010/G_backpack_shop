@@ -10,7 +10,7 @@ class DropDown extends React.Component {
                             <i className="fa-solid fa-caret-down"></i>
                         </div>
                         <ul className="dropdown-menu">
-                            <li className="dropdow-content">
+                            <li className="dropdown-content">
                                 <ul>
                                     <li>phụ kiện balo</li>
                                     <li>balo theo loại</li>
@@ -25,7 +25,7 @@ class DropDown extends React.Component {
                             <i className="fa-solid fa-caret-down"></i>
                         </div>
                         <ul className="dropdown-menu">
-                            <li className="dropdow-content">
+                            <li className="dropdown-content">
                                 <ul>
                                     <li>phụ kiện balo</li>
                                     <li>balo theo loại</li>
@@ -41,7 +41,7 @@ class DropDown extends React.Component {
                             <i className="fa-solid fa-caret-down"></i>
                         </div>
                         <ul className="dropdown-menu">
-                            <li className="dropdow-content">
+                            <li className="dropdown-content">
                                 <ul>
                                     <li>phụ kiện balo</li>
                                     <li>balo theo loại</li>
@@ -57,7 +57,7 @@ class DropDown extends React.Component {
                             <i className="fa-solid fa-caret-down"></i>
                         </div>
                         <ul className="dropdown-menu">
-                            <li className="dropdow-content">
+                            <li className="dropdown-content">
                                 <ul>
                                     <li>phụ kiện balo</li>
                                     <li>balo theo loại</li>
@@ -72,7 +72,7 @@ class DropDown extends React.Component {
                             <i className="fa-solid fa-caret-down"></i>
                         </div>
                         <ul className="dropdown-menu">
-                            <li className="dropdow-content">
+                            <li className="dropdown-content">
                                 <ul>
                                     <li>phụ kiện balo</li>
                                     <li>balo theo loại</li>
