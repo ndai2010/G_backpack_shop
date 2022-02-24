@@ -110,6 +110,7 @@
             cursor: pointer;
             color: #5e6161;
             position: relative;
+            z-index: 2;
 
             &:hover {
                 i {
@@ -119,7 +120,7 @@
                 ul {
                     visibility: visible;
                     top: 100%;
-                    opacity: 1;
+                    opacity: 2;
                 }
             }
 
@@ -133,6 +134,7 @@
                 transition: 1s ease-in-out;
                 top: 400px;
                 opacity: 0;
+                background-color: #fff;
 
                 &:before {
                     position: absolute;
