@@ -1,0 +1,117 @@
+.row {
+    font-family: Arial, Helvetica, sans-serif;
+    color: #5e6161;
+
+    .section-service {
+        display: flex;
+        height: 200px;
+        align-items: center;
+        justify-content: space-between;
+
+        .icon {
+            display: flex;
+            height: 100%;
+            width: 30%;
+            flex-direction: column;
+            justify-content: center;
+
+            i {
+                font-size: 25px;
+            }
+
+            span {
+                color: #161515;
+                padding: 20px 0 10px;
+                font-size: 16px;
+                font-weight: 500;
+            }
+        }
+    }
+
+    .section-banner {
+        display: flex;
+        height: 500px;
+
+        .left-content {
+            width: 50%;
+            padding-right: 15px;
+
+            .up-content {
+                width: 100%;
+                height: 47%;
+                margin-bottom: 30px;
+
+                .banner-image {
+                    height: 100%;
+                    background-image: url(../../../asset/section-banner/slide-homepage-min_570x235.jpg);
+                    position: relative;
+                    background-position: center;
+                    background-repeat: no-repeat;
+
+                    .content-banner {
+                        top: 30%;
+                        text-align: left;
+                        position: absolute;
+                        left: 10%;
+                        display: flex;
+                        flex-direction: column;
+                        color: white;
+
+                        .subtitle {
+                            font-size: 40px;
+                            font-weight: 500;
+                            text-transform: uppercase
+                        }
+
+                        a {
+                            display: inline-block;
+                            text-align: center;
+                            text-transform: uppercase;
+                            cursor: pointer;
+                            border: 1px solid transparent;
+                            padding: 10px 10px;
+                            font-size: 14px;
+                            font-weight: 600;
+                            background-color: #2e2e3b;
+                            color: white;
+
+                            i {
+                                padding-left: 10px;
+                            }
+
+                            &:hover {
+                                background-color: #33CC66;
+                            }
+                        }
+                    }
+                }
+            }
+
+            .down-content {
+                width: 100%;
+                height: 47%;
+                cursor: pointer;
+
+                .banner-image {
+                    background-position: center;
+                    background-repeat: no-repeat;
+                    height: 100%;
+                    background-image: url(../../../asset/section-banner/slide_homepage-5_570x.jpg);
+                }
+            }
+        }
+
+        .right-content {
+            width: 50%;
+            padding-left: 15px;
+            cursor: pointer;
+
+            .banner-image {
+                background-position: center;
+                background-repeat: no-repeat;
+                height: 100%;
+                background-image: url(../../../asset/section-banner/slide_homepage_4_570x.jpg);
+            }
+        }
+    }
+}

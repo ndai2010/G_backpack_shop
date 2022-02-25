@@ -134,7 +134,7 @@
                 transition: 1s ease-in-out;
                 top: 400px;
                 opacity: 0;
-                background-color: #fff;
+                background-color: white;
 
                 &:before {
                     position: absolute;
@@ -157,7 +157,7 @@
     .search-box {
         height: 30px;
         display: flex;
-        background-color: #fff;
+        background-color: #f8f8f8;
         border-radius: 20px;
         padding: 10px;
         align-items: center;
@@ -165,6 +165,7 @@
 
         &:hover {
             box-shadow: 0 0 25px 0 rgba(0, 0, 0, 0.4);
+            background-color: #fff;
 
             input {
                 width: 100%;
