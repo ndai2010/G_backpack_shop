@@ -8,63 +8,69 @@ class Banner extends React.Component {
     constructor(props) {
         super(props);
         this.state = {
-            ImgSlider: [],
-            // properties: this.state.ImgSlider,
-            // property: this.state.ImgSlider[0],
+            slideIndex: '',
+            properties: this.data.properties,
+            property: this.data.properties[0]
         };
     }
-
-
-
-    // nextProperty = () => {
-    //     let newIndex = this.state.ImgSlider.id + 1;
-    //     this.setState({
-    //         property: this.state.ImgSlider[newIndex]
-    //     })
-    // }
-
-    // prevProperty = () => {
-    //     let newIndex = this.state.ImgSlider.id - 1;
-    //     this.setState({
-    //         property: this.state.ImgSlider[newIndex]
-    //     })
-    // }
-
-
-    async componentDidMount() {
-        this.setState({
-            ImgSlider: [{
-                id: 1,
+    data = {
+        "properties": [
+            {
+                id: 0,
                 img: Banner1
             },
             {
-                id: 2,
+                id: 1,
                 img: Banner2
             },
             {
-                id: 3,
+                id: 2,
                 img: Banner3
-            }]
-        });
+            }
+        ]
+
+    }
+    componentDidMount() {
+
+    }
+
+    nextProperty = () => {
+        let newIndex = this.state.property.id + 1;
+        this.setState({
+            property: this.data.properties[newIndex]
+        })
+    }
+
+    prevProperty = () => {
+        let newIndex = this.state.property.id - 1;
+        this.setState({
+            property: this.data.properties[newIndex]
+        })
     }
     render() {
+        let { properties, property } = this.state;
         return (
             <div className="Banner">
                 <div className="slider">
-
-                    <div className="sliderImg"></div>
-
-                    {/* {
-                        this.state.ImgSlider.map((slide, index) => {
-                            return (
+                    <div className="sliderImg">
+                        {
+                            properties && properties.length > 0 &&
+                            properties.map(property =>
+                                <div className="img" style={{ backgroundImage: `url(${property.img})` }}></div>
                             )
-                        })
-                    } */}
-                </div>
-                <div className="overlay">
-                    <div className="btn-slide">
-                        <span className="prev-btn"><i className="fa-solid fa-angle-left"></i></span>
-                        <span className="next-btn"><i className="fa-solid fa-angle-right"></i></span>
+                        }
+                    </div>
+                    <div className="overlay">
+                        <div className="btn-slide">
+                            <button className="prev-btn"
+                                onClick={() => this.prevProperty()}
+                                disabled={property.id === 0}
+                            ><i className="fa-solid fa-angle-left"></i></button>
+                            <button className="next-btn"
+                                onClick={() => this.nextProperty()}
+                                disabled={property.id === 2}
+                            ><i className="fa-solid fa-angle-right"></i></button>
+                        </div>
                     </div>
                 </div>
             </div>
