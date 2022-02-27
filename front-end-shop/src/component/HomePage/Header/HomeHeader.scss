@@ -3,6 +3,75 @@
     height: 80px;
     justify-content: center;
     margin-top: 5px;
+    .parent-dropdown-container {
+        display: flex;
+        list-style: none;
+        justify-content: space-between;
+        position: relative;
+
+        .parent-dropdown {
+            list-style: none;
+
+            .title {
+                span {
+                    padding: 0 5px;
+                    text-transform: uppercase;
+                    font-weight: 700;
+                    font-family: Arial, Helvetica, sans-serif;
+                    font-size: 14px;
+                }
+            }
+
+            &:hover {
+                cursor: pointer;
+                color: #33CC66;
+
+                .dropdown-menu {
+                    top: 100%;
+                    visibility: visible;
+                    opacity: 1;
+                }
+            }
+
+            .dropdown-menu {
+                position: absolute;
+                border-radius: 10px;
+                box-shadow: 2px 3px 6px rgba(0, 0, 0, 0.30);
+                top: 400px;
+                display: flex;
+                align-items: flex-end;
+                justify-content: stretch;
+                filter: drop-shadow(4px 6px 8px rgba(0, 0, 0, 0.33));
+                visibility: hidden;
+                opacity: 0;
+                transition: 1s ease-in-out;
+
+                .dropdown-content {
+                    position: relative;
+
+                    &:before {
+                        position: absolute;
+                        bottom: 100%;
+                        left: 20%;
+                        border-top: 8px solid transparent;
+                        border-left: 8px solid transparent;
+                        border-right: 8px solid transparent;
+                        border-bottom: 8px solid #5e6161;
+                        z-index: 1;
+                    }
+
+                    ul {
+                        list-style: none;
+                        padding: 5px 20px;
+
+                        li {
+                            padding: 5px;
+                        }
+                    }
+                }
+            }
+        }
+    }
 
     .left-content {
         width: 10%;
@@ -23,141 +92,24 @@
         .navigation {
             text-align: center;
             padding-right: 25px;
-
-            .parent-dropdown-container {
-                display: flex;
-                list-style: none;
-                justify-content: space-between;
-                position: relative;
-
-                .parent-dropdown {
-                    list-style: none;
-
-                    .title {
-                        span {
-                            padding: 0 5px;
-                            text-transform: uppercase;
-                            font-weight: 700;
-                            font-family: Arial, Helvetica, sans-serif;
-                            font-size: 14px;
-                        }
-                    }
-
-                    &:hover {
-                        cursor: pointer;
-                        color: #33CC66;
-
-                        .dropdown-menu {
-                            top: 100%;
-                            visibility: visible;
-                            opacity: 1;
-                        }
-                    }
-
-                    .dropdown-menu {
-                        width: 200px;
-                        position: absolute;
-                        border-radius: 10px;
-                        box-shadow: 2px 3px 6px rgba(0, 0, 0, 0.30);
-                        top: 400px;
-                        // left: auto;
-                        // transform: translateX(-50%);
-                        display: flex;
-                        align-items: flex-end;
-                        justify-content: stretch;
-                        filter: drop-shadow(4px 6px 8px rgba(0, 0, 0, 0.33));
-                        visibility: hidden;
-                        opacity: 0;
-                        transition: 1s ease-in-out;
-
-                        .dropdown-content {
-                            width: 100%;
-                            position: relative;
-
-                            &:before {
-                                position: absolute;
-                                bottom: 100%;
-                                left: 20%;
-                                border-top: 8px solid transparent;
-                                border-left: 8px solid transparent;
-                                border-right: 8px solid transparent;
-                                border-bottom: 8px solid #5e6161;
-                                z-index: 1;
-                            }
-
-                            ul {
-                                list-style: none;
-
-                                li {
-                                    padding: 5px;
-                                }
-                            }
-                        }
-                    }
-                }
-            }
         }
     }
 
     .right-content {
         width: 30%;
         display: flex;
-        align-items: center;
         justify-content: center;
+        padding-top: 30px;
         color: #5e6161;
 
-        .btn {
-            cursor: pointer;
-            color: #5e6161;
-            position: relative;
-            z-index: 2;
-
-            &:hover {
-                i {
-                    color: #33CC66;
-                }
-
-                ul {
-                    visibility: visible;
-                    top: 100%;
-                    opacity: 2;
-                }
-            }
-
-            ul {
-                position: absolute;
-                visibility: hidden;
-                list-style: none;
-                border-radius: 10px;
-                padding: 10px;
-                box-shadow: 0 0 25px 0 rgba(0, 0, 0, 0.4);
-                transition: 1s ease-in-out;
-                top: 400px;
-                opacity: 0;
-                background-color: white;
-
-                &:before {
-                    position: absolute;
-                    bottom: 100%;
-                    left: 20%;
-                    border-top: 8px solid transparent;
-                    border-left: 8px solid transparent;
-                    border-right: 8px solid transparent;
-                    border-bottom: 8px solid #5e6161;
-                    z-index: 1;
-                }
-
-                li {
-                    padding: 5px 10px 0px 10px;
-                }
-            }
+        .right {
+            padding: 0px 10px;
         }
     }
 
     .search-box {
         height: 30px;
         display: flex;
-        background-color: #f8f8f8;
         border-radius: 20px;
         padding: 10px;
         align-items: center;
@@ -165,7 +117,6 @@
 
         &:hover {
             box-shadow: 0 0 25px 0 rgba(0, 0, 0, 0.4);
-            background-color: #fff;
 
             input {
                 width: 100%;
