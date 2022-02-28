@@ -13,13 +13,13 @@ class HomeHeader extends React.Component {
                                 <DropDown />
                             </div>
                             <div className="right-content">
-                                <div className="search-box">
-                                    <input type="text" placeholder="what are you looking for ?"></input>
-                                    <div className="btn">
-                                        <i className="fa-solid fa-magnifying-glass"></i>
-                                    </div>
-                                </div>
                                 <ul className="parent-dropdown-container">
+                                    <div className="search-box right">
+                                        <input type="text" placeholder="what are you looking for ?"></input>
+                                        <div className="btn">
+                                            <i className="fa-solid fa-magnifying-glass"></i>
+                                        </div>
+                                    </div>  
                                     <li className="parent-dropdown right">
                                         <div className="title">
                                             <i className="fa-solid fa-cart-shopping"></i>
@@ -37,17 +37,30 @@ class HomeHeader extends React.Component {
                                                 </ul>
                                             </li>
                                         </ul>
-
                                     </li>
                                     <li className="parent-dropdown right">
                                         <div className="title">
-                                            <i className="fa-solid fa-earth-asia"></i>
+                                            <i class="fa-solid fa-users"></i>                                        
                                         </div>
                                         <ul className="dropdown-menu">
                                             <li className="dropdown-content">
                                                 <ul>
-                                                    <li>vn</li>
-                                                    <li>en</li>
+                                                    <li>
+                                                        <i className="fa-solid fa-user-plus"></i>
+                                                        Đăng kí
+                                                    </li>
+                                                    <li>
+                                                        <i className="fa-solid fa-unlock"></i>
+                                                        Đăng nhập
+                                                    </li>
+                                                    <li>
+                                                        <i className="fa-solid fa-right-from-bracket"></i>
+                                                        Đăng xuất
+                                                    </li>
+                                                    <li>
+                                                        <i className="fa-solid fa-user-check"></i>
+                                                        Tài khoản của tôi
+                                                    </li>
                                                 </ul>
                                             </li>
                                         </ul>
