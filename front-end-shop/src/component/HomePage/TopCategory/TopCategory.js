@@ -38,7 +38,7 @@ class TopCategory extends React.Component {
                                         <span className='title'>FOR ALL TRAVELLER</span>
                                         <span className='subtitle'>BACKPACK</span>
                                         <a href='/' className='btn'>Discover Now
-                                            <i class="fa-solid fa-arrow-right"></i></a>
+                                            <i className="fa-solid fa-arrow-right"></i></a>
                                     </div>
                                 </div>
                             </div>
