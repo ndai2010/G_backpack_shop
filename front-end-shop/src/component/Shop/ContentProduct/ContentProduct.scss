@@ -14,8 +14,23 @@
 
     .left-content {
         height: 100%;
-        width: 30%;
-        border: 1px solid green;
+        width: 25%;
+        border: 2px solid #e1e1e1;
+        padding: 25px;
+        border-radius: 20px;
+        margin-bottom: 30px;
+
+        .category-header {
+            height: 50px;
+            border-bottom: 2px solid #ddd;
+            width: 70%;
+            text-transform: uppercase;
+            font-weight: 600;
+            margin-bottom: 25px;
+            padding-top: 10px;
+        }
+
+        .list-category {}
     }
 
     .right-content {

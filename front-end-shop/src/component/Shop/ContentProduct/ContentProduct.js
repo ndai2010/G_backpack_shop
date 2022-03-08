@@ -18,10 +18,12 @@ class ContentProduct extends React.Component {
                         </div>
                         <div className="archive-products">
                             <div className="left-content">
-                                <div>header</div>
+                                <div className="category-header">
+                                    <span>category</span>
+                                </div>
+                                <div className="list-category">header</div>
                             </div>
                             <div className="right-content">
-
                             </div>
                         </div>
                     </div>
