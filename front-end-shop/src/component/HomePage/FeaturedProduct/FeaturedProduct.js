@@ -126,63 +126,68 @@ class FeaturedProduct extends React.Component {
     };
     let { listProduct } = this.state;
     return (
-      <div className="container">
-        <div className="row">
-          <div className="header">
-            <div className="title">
-              <h2>Featured Product</h2>
+      <div className="featured-product" style={{ backgroundColor: "#f8f8f8" }}>
+        <div className="container">
+          <div className="row">
+            <div className="header">
+              <div className="title">
+                <h2>Featured Product</h2>
+              </div>
+              <div className="subtitle">
+                <span>
+                  Cloth talk. It's on you how want to live. Everyone has a choice.
+                  I pick my choice, squeaky clean. I'm giving you cloth alert, cut
+                  from a speacial cloth.
+                </span>
+              </div>
             </div>
-            <div className="subtitle">
-              <span>
-                Cloth talk. It's on you how want to live. Everyone has a choice.
-                I pick my choice, squeaky clean. I'm giving you cloth alert, cut
-                from a speacial cloth.
-              </span>
-            </div>
-          </div>
-          <div className="list-product">
-            <Slider
-              {...settings}
-              className="list-content"
-              style={{ backgroundColor: "#f8f8f8" }}
-            >
-              {listProduct &&
-                listProduct.length > 0 &&
-                listProduct.map((item, index) => {
-                  return (
-                    <div className="card-product-container" key={index}>
-                      <div
-                        className="product-image"
-                        style={{ backgroundImage: `url(${item.thumb})` }}
-                      >
-                        <div className="btn-box">
-                          <div className="btn" id="cart">
-                            <i className="fa-solid fa-cart-shopping"></i>
-                          </div>
-                          <div className="btn" id="favorite">
-                            <i className="fa-solid fa-heart"></i>
-                          </div>
-                          <div className="btn" id="compare">
-                            <i className="fa-solid fa-code-compare"></i>
-                          </div>
-                          <div className="btn" id="view">
-                            <i className="fa-solid fa-eye"></i>
+            <div className="list-product">
+              <Slider
+                {...settings}
+                className="list-content"
+                style={{ backgroundColor: "#f8f8f8" }}
+              >
+                {listProduct &&
+                  listProduct.length > 0 &&
+                  listProduct.map((item, index) => {
+                    return (
+                      <div className="card-product-container" key={index}>
+                        <div
+                          className="product-image"
+                          style={{ backgroundImage: `url(${item.thumb})` }}
+                        >
+                          <div className="btn-box">
+                            <div className="btn" id="cart">
+                              <i className="fa-solid fa-cart-shopping"></i>
+                            </div>
+                            <div className="btn" id="favorite">
+                              <i className="fa-solid fa-heart"></i>
+                            </div>
+                            <div className="btn" id="compare">
+                              <i className="fa-solid fa-code-compare"></i>
+                            </div>
+                            <div className="btn" id="view">
+                              <i className="fa-solid fa-eye"></i>
+                            </div>
                           </div>
                         </div>
+                        <div className="product-description">
+                          <span className="name">{item.name}</span>
+                          <span className="price">{item.price}</span>
+                        </div>
                       </div>
-                      <div className="product-description">
-                        <span className="name">{item.name}</span>
-                        <span className="price">{item.price}</span>
-                      </div>
-                    </div>
-                  );
-                })}
-            </Slider>
+                    );
+                  })}
+              </Slider>
+            </div>
+            <div className="view-all-collection">
+              <span>View all item</span>
+              <i className="fa-solid fa-arrow-right"></i>
+            </div>
           </div>
-          <div className="view-all-collection">
-            <span>View all item</span>
-            <i className="fa-solid fa-arrow-right"></i>
-          </div>
+
+
+
         </div>
       </div>
     );

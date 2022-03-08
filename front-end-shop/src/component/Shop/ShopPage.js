@@ -1,5 +1,6 @@
-import React from 'react'
-
+import React, { Fragment } from 'react';
+import HomeHeader from '../HomePage/Header/HomeHeader';
+import ContentProduct from './ContentProduct/ContentProduct'
 class ShopPage extends React.Component {
     constructor(props) {
         super(props);
@@ -10,7 +11,10 @@ class ShopPage extends React.Component {
 
     render() {
         return (
-            <div>Shop</div>
+            <Fragment>
+                <HomeHeader />
+                <ContentProduct />
+            </Fragment>
         )
     }
 }

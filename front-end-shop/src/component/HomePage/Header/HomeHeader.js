@@ -4,7 +4,7 @@ import DropDown from "./DropDown/DropDown";
 class HomeHeader extends React.Component {
     render() {
         return (
-            <div className="header" style={{backgroundColor:'white'}}>
+            <div className="header" style={{ backgroundColor: 'white' }}>
                 <div className="container">
                     <div className="row">
                         <div className="content-header">
@@ -19,7 +19,7 @@ class HomeHeader extends React.Component {
                                         <div className="btn">
                                             <i className="fa-solid fa-magnifying-glass"></i>
                                         </div>
-                                    </div>  
+                                    </div>
                                     <li className="parent-dropdown right">
                                         <div className="title">
                                             <i className="fa-solid fa-cart-shopping"></i>
@@ -40,7 +40,7 @@ class HomeHeader extends React.Component {
                                     </li>
                                     <li className="parent-dropdown right">
                                         <div className="title">
-                                            <i class="fa-solid fa-users"></i>                                        
+                                            <i className="fa-solid fa-users"></i>
                                         </div>
                                         <ul className="dropdown-menu">
                                             <li className="dropdown-content">
