@@ -11,13 +11,9 @@ class Header extends React.Component {
     render() {
         return (
             <div className="nav-header">
-                <div className="container">
-                    <div className="row">
-                        <div className="header-logo"></div>
-                        <div className="main-menu"></div>
-                        <div className="header-cart"></div>
-                    </div>
-                </div>
+                <div className="hotline"></div>
+                <div className="main-nav"></div>
+                <div className="account"></div>
             </div>
         )
     }

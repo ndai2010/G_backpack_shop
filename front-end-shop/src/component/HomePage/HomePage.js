@@ -1,5 +1,6 @@
 import React, { Fragment } from "react";
-import Header from "./Header/Header";
+import './HomePage.scss'
+import SlideShow from "./Banner/SlideShow";
 class HomePage extends React.Component {
     constructor(props) {
         super(props);
@@ -11,25 +12,60 @@ class HomePage extends React.Component {
     render() {
         return (
             <Fragment>
-                <div className="home-header container">
-                    <div className="row">
-                        <div className="uper-home-header">
-                            <div className="left-nav"></div>
-                            <div className="right-nav">
-                                <div className="nav2">
-                                    <div className="language-btn"></div>
-                                    <div className="currency-btn"></div>
-                                    <div className="search-btn"></div>
-                                    <div className="account-btn"></div>
+                <div className="home-header">
+                    <div className="uper-header container">
+                        <div className="right-content">
+                            <i className="fa-solid fa-percent"></i>
+                            <span>Get upto 25% Cashback on first Order : GET25OFF</span>
+                        </div>
+                        <div className="left-content">
+                            <div className="account">
+                                <div className="myaccount dropdown">
+                                    <span>My Account</span>
+                                    <i className="fa-solid fa-angle-down"></i>
+                                </div>
+                            </div>
+                            <div className="lang-curr-wrapper">
+                                <div className="language dropdown">
+                                    <span>English</span>
+                                    <i className="fa-solid fa-angle-down"></i>
+                                </div>
+                                <div className="currecy dropdown">
+                                    <span>Currency</span>
+                                    <i className="fa-solid fa-angle-down"></i>
                                 </div>
                             </div>
                         </div>
-                        <div className="down-home-header">
-                            <Header />
+                    </div>
+                    <div className="down-header">
+                        <div className="container">
+                            <div className="hotline">
+                                <div className="btn-hotline">
+                                    <i className="fa-solid fa-phone-volume"></i>
+                                </div>
+                                <div className="contract">
+                                    <span>Free call us:</span>
+                                    <div className="number">086 205 2426</div>
+                                </div>
+                            </div>
+                            <div className="header-logo"></div>
+                            <div className="header-cart">
+                                <div className="btn-cart">
+                                    <i className="fa-solid fa-cart-shopping"></i>
+                                </div>
+                                <div className="cart-value">
+                                    <span>Check out:</span>
+                                    <div className="value">
+                                        <span className="count">0</span>
+                                        <span>items</span>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
-            </Fragment>
+                <SlideShow />
+            </Fragment >
         )
     }
 }

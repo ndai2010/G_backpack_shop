@@ -1,0 +1,152 @@
+.home-header{
+    background-color: #191919;
+    .uper-header{
+        width: 100%;
+        height: 50px;
+        display: flex;
+        justify-content: space-between;
+        color: #fff;
+        .right-content{
+            width: 40%;
+            height: 100%;
+            padding: 10px 0px;
+            font-size: 14px;
+            i{
+                padding-right: 10px;
+            }
+        }
+        .left-content{
+            height: 100%;
+            display: flex;
+            text-align: center;
+            font-size: 14px;
+            font-weight: 400;
+            .account{
+                height: 100%;
+                width: 130px;
+                padding: 10px 15px;
+                .myaccount{
+                    display: flex;
+                    justify-content: center;
+                    cursor: pointer;
+                    i{
+                        padding: 5px 6px;
+                    }
+                    &:hover{
+                        color: #ffc001;
+                    }
+                }
+            }
+            .lang-curr-wrapper{
+                height: 100%;
+                display: flex;
+                .language{
+                    width: 120px;
+                    padding: 10px 15px;
+                    justify-content: center;
+                    cursor: pointer;
+                    i{
+                        padding: 5px 6px;
+                    }
+                    &:hover{
+                        color: #ffc001;
+                    }
+                }
+                .currecy{
+                    width: 120px;
+                    height: 100%;
+                    padding: 10px 15px;
+                    justify-content: center;
+                    cursor: pointer;
+                    i{
+                        padding: 5px 6px;
+                    }
+                    &:hover{
+                        color: #ffc001;
+                    }
+                }
+            }
+        }
+    }
+    .down-header{
+        display: flex;
+        height: 130px;
+        width: 100%;
+        border-top: 1px solid gray;
+        .container{
+            display: flex;
+            justify-content: space-between;
+            .hotline{
+                width: 20%;
+                height: 100%;
+                display: flex;
+                align-content: center;
+                padding: 35px 0px;
+                .btn-hotline{
+                    text-align: center;
+                    background-color: #fff;
+                    width: 50px;
+                    height: 50px;
+                    border-radius: 50%;
+                    font-size: 23px;
+                    cursor: pointer;
+                    i{
+                        padding: 15px 5px;
+                    }
+                }
+                .contract{
+                    color: #fff;
+                    margin-left: 10px;
+                    text-align: left;
+                    font-size: 16px;
+                    cursor: pointer;
+                    .number{
+                        text-transform: uppercase;
+                        font-weight: 500;
+                        font-size: 20px;
+                    }
+                }
+            }
+            .header-logo{
+                width:40%;
+                height: 100%;
+                background-image: url(../../asset/logo.png);
+                background-repeat: no-repeat;
+                background-position: center;
+            }
+            .header-cart{
+                width: 20%;
+                height: 100%;
+                display: flex;
+                padding: 35px 15px;
+                .btn-cart{
+                    text-align: center;
+                    background-color: #fff;
+                    width: 50px;
+                    height: 50px;
+                    border-radius: 50%;
+                    font-size: 23px;
+                    cursor: pointer;
+                    i{
+                        padding: 15px 5px;
+                    }
+                }
+                .cart-value{
+                    color: #fff;
+                    margin-left: 10px;
+                    text-align: left;
+                    font-size: 16px;
+                    cursor: pointer;
+                    .value{
+                        font-weight: 600;
+                        font-size: 18px;
+                        .count{
+                            padding-right: 10px;
+                        }
+                    }
+                }
+            }
+        }
+        
+    }
+}
