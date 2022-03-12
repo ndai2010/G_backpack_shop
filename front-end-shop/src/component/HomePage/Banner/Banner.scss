@@ -1,22 +1,22 @@
-.slide-img{
+.slide-img {
     height: 500px;
-    background-image:url(../../../asset/Banner/bn1.jpg);
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
+    position: relative;
 }
+
 .slick-prev {
     left: 0 !important;
     z-index: 10;
     margin-left: 100px;
 }
-.slick-next{
+
+.slick-next {
     right: 0 !important;
     content: "\e5c8" !important;
     margin-right: 100px;
 }
 
-.slick-prev, .slick-next {
+.slick-prev,
+.slick-next {
     height: 50px !important;
     width: 50px !important;
     border: 2px solid #fff !important;
@@ -24,23 +24,30 @@
     font-size: 20px !important;
     transition: all ease-in-out 0.5s;
     opacity: 0;
-    &:hover{
+
+    &:hover {
         background: #6b8e3c !important;
         border-color: #6b8e3c !important;
     }
-    &::before{
+
+    &::before {
         font-family: 'FontAwesome' !important;
     }
 }
+
 .slick-slider {
-    &:hover{
-        .slick-prev, .slick-next {
+    &:hover {
+
+        .slick-prev,
+        .slick-next {
             opacity: 1;
         }
+
         .slick-prev {
             margin-left: 50px;
         }
-        .slick-next{
+
+        .slick-next {
             margin-right: 50px;
         }
     }

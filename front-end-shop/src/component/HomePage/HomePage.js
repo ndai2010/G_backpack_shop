@@ -1,6 +1,7 @@
 import React, { Fragment } from "react";
 import './HomePage.scss'
 import SlideShow from "./Banner/SlideShow";
+import NavHeader from "../HomePage/Header/Header"
 class HomePage extends React.Component {
     constructor(props) {
         super(props);
@@ -15,8 +16,8 @@ class HomePage extends React.Component {
                 <div className="home-header">
                     <div className="uper-header container">
                         <div className="right-content">
-                            <i className="fa-solid fa-percent"></i>
-                            <span>Get upto 25% Cashback on first Order : GET25OFF</span>
+                            <i className="fa-solid fa-phone"></i>
+                            <span>hot line : 0862052426</span>
                         </div>
                         <div className="left-content">
                             <div className="account">
@@ -39,16 +40,13 @@ class HomePage extends React.Component {
                     </div>
                     <div className="down-header">
                         <div className="container">
-                            <div className="hotline">
-                                <div className="btn-hotline">
-                                    <i className="fa-solid fa-phone-volume"></i>
-                                </div>
-                                <div className="contract">
-                                    <span>Free call us:</span>
-                                    <div className="number">086 205 2426</div>
+                            <div className="header-logo"></div>
+                            <div className="search-bar">
+                                <div className="search-box">
+                                    <input type="text" placeholder="What are you looking for ?"></input>
+                                    <i className="fa-solid fa-magnifying-glass"></i>
                                 </div>
                             </div>
-                            <div className="header-logo"></div>
                             <div className="header-cart">
                                 <div className="btn-cart">
                                     <i className="fa-solid fa-cart-shopping"></i>
@@ -64,6 +62,7 @@ class HomePage extends React.Component {
                         </div>
                     </div>
                 </div>
+                <NavHeader />
                 <SlideShow />
             </Fragment >
         )

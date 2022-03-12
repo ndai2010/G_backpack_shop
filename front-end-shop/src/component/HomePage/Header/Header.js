@@ -11,9 +11,32 @@ class Header extends React.Component {
     render() {
         return (
             <div className="nav-header">
-                <div className="hotline"></div>
-                <div className="main-nav"></div>
-                <div className="account"></div>
+                <div className="container">
+                    <div className="main-menu">
+                        <ul className="dropdown">
+                            <li className="category">
+                                <span className="title">Trang phục</span>
+                                <i className="fa-solid fa-chevron-down"></i>
+                            </li>
+                            <li className="category">
+                                <span className="title">Trang phục</span>
+                                <i className="fa-solid fa-chevron-down"></i>
+                            </li>
+                            <li className="category">
+                                <span className="title">Trang phục</span>
+                                <i className="fa-solid fa-chevron-down"></i>
+                            </li>
+                            <li className="category">
+                                <span className="title">Trang phục</span>
+                                <i className="fa-solid fa-chevron-down"></i>
+                            </li>
+                            <li className="category">
+                                <span className="title">Trang phục</span>
+                                <i className="fa-solid fa-chevron-down"></i>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
             </div>
         )
     }
