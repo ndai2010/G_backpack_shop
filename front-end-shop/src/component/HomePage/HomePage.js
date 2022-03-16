@@ -2,6 +2,7 @@ import React, { Fragment } from "react";
 import './HomePage.scss'
 import SlideShow from "./Banner/SlideShow";
 import NavHeader from "../HomePage/Header/Header"
+import TrendingCategoryList from "./TrendingCategoryList/TrendingCategoryList";
 class HomePage extends React.Component {
     constructor(props) {
         super(props);
@@ -64,6 +65,7 @@ class HomePage extends React.Component {
                 </div>
                 <NavHeader />
                 <SlideShow />
+                <TrendingCategoryList />
             </Fragment >
         )
     }
