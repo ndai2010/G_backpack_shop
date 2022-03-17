@@ -1,0 +1,26 @@
+.product-tab {
+    .title-box {
+        .row {
+            justify-content: center;
+
+            .title {
+                text-align: center;
+                text-transform: uppercase;
+                font-weight: 700;
+                font-size: 25px;
+            }
+
+            .tab-nav {
+                margin-top: 20px;
+
+                .col-3 {
+                    border: 1px solid black;
+                    text-align: center;
+                    padding: 5px 0;
+                    border-radius: 20px;
+                    margin: 0 10px;
+                }
+            }
+        }
+    }
+}

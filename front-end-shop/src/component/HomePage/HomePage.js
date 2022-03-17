@@ -2,7 +2,9 @@ import React, { Fragment } from "react";
 import './HomePage.scss'
 import SlideShow from "./Banner/SlideShow";
 import NavHeader from "../HomePage/Header/Header"
-import TrendingCategoryList from "./TrendingCategoryList/TrendingCategoryList";
+import AboutStore from "./AboutStore/AboutStore";
+import TrendingCategoryList from "./Trending/TrendingCategoryList"
+import ProductTab from "./Trending/ProductTab";
 class HomePage extends React.Component {
     constructor(props) {
         super(props);
@@ -66,6 +68,7 @@ class HomePage extends React.Component {
                 <NavHeader />
                 <SlideShow />
                 <TrendingCategoryList />
+                <ProductTab />
             </Fragment >
         )
     }
