@@ -1,0 +1,121 @@
+.card-container {
+    .warpper {
+        height: 390px;
+        width: 270px;
+        box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+        transition: all 0.8s ease;
+        border-radius: 10px;
+
+        &:hover {
+            box-shadow: rgba(0, 0, 0, 0.25) 0px 14px 28px, rgba(0, 0, 0, 0.22) 0px 10px 10px;
+        }
+
+        .card-img {
+            border-radius: 10px 10px 0 0;
+            height: 320px;
+            width: 100%;
+            overflow: hidden;
+            background-image: url(../../asset/category/dao.png);
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: cover;
+            color: #fff;
+            position: relative;
+            margin-bottom: 10px;
+            cursor: pointer;
+
+            &:hover {
+                .box-list {
+                    li {
+                        opacity: 1;
+                        visibility: visible;
+                        transform: translateY(0);
+                    }
+                }
+            }
+
+            .box-list {
+                margin: 0;
+                position: absolute;
+                bottom: 20px;
+                left: 40px;
+
+                ul {
+                    margin: 0;
+                    padding: 0;
+                    display: flex;
+                    flex-wrap: wrap;
+                    align-items: center;
+                    list-style: none;
+                    justify-content: center;
+
+                    li {
+                        align-items: center;
+                        margin: 0 10px;
+                        width: 45px;
+                        height: 45px;
+                        transition: all 1s ease;
+                        opacity: 0;
+                        visibility: hidden;
+                        transform: translateY(30px);
+                        border-radius: 50%;
+                        display: flex;
+                        justify-content: center;
+                        background-color: #6b8e3c;
+                        cursor: pointer;
+
+                        font-weight: 600;
+                        color: #fff;
+                        position: relative;
+                        z-index: 10;
+                        overflow: hidden;
+
+                        &::before {
+                            content: "";
+                            position: absolute;
+                            z-index: -1;
+                            top: 0;
+                            left: 0;
+                            right: 0;
+                            bottom: 0;
+                            background: #333;
+                            transform: scaleY(0);
+                            transform-origin: 50% 100%;
+                            transition-property: transform;
+                            transition-duration: 0.3s;
+                            transition-timing-function: ease-out;
+                            border-radius: 25px;
+                        }
+
+                        &:hover {
+                            &::before {
+                                transform: scaleY(1);
+                            }
+                        }
+
+                        &:hover {
+                            background-color: #000;
+                        }
+                    }
+
+                }
+            }
+        }
+
+        .card-info {
+            text-align: center;
+            font-weight: 600;
+            font-size: 18px;
+            border-radius: 0 0 10px 10px;
+
+            .name {
+
+                color: #333;
+            }
+
+            .price {
+                color: #6b8e3c;
+            }
+        }
+    }
+}
