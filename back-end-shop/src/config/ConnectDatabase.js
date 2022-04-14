@@ -1,14 +1,18 @@
-import mongoose from "mongoose";
-
-const connect = async () => {
+import { Sequelize } from "sequelize"
+let connect = async () => {
     try {
-        await mongoose.connect('mongodb://localhost:27017/travel_shop');
-        console.log('connect success');
-    } catch (e) {
-        console.log(e);
+        await sequelize.authenticate();
+        console.log('Connection has been established successfully.');
+    } catch (error) {
+        console.error('Unable to connect to the database:', error);
     }
 }
 
-module.exports = {
-    connect
-}
+const sequelize = new Sequelize('g-shop', 'root', null, {
+    host: 'localhost',
+    dialect: 'mysql',
+    define: {
+        freezeTableName: true
+    }
+});
+export default connect
