@@ -1,41 +1,32 @@
 'use strict';
 module.exports = {
     async up(queryInterface, Sequelize) {
-        await queryInterface.createTable('Products', {
+        await queryInterface.createTable('Discounts', {
             // name: Sequelize.STRING,
             // description: Sequelize.TEXT,
-            // SKU: Sequelize.STRING,
-            // categoryID: Sequelize.INTEGER,
-            // inventoryID: Sequelize.INTEGER,
-            // discountID: Sequelize.INTEGER,
-            // price: Sequelize.DECIMAL,
+            // discount_percent: Sequelize.DECIMAL,
+            // active: Sequelize.BOOLEAN,
+
             id: {
                 allowNull: false,
                 autoIncrement: true,
                 primaryKey: true,
                 type: Sequelize.INTEGER(11)
             },
+
             name: {
                 type: Sequelize.STRING,
             },
             description: {
                 type: Sequelize.TEXT
             },
-            SKU: {
-                type: Sequelize.STRING
-            },
-            categoryID: {
-                type: Sequelize.INTEGER
-            },
-            inventoryID: {
-                type: Sequelize.INTEGER
-            },
-            discountID: {
-                type: Sequelize.INTEGER
-            },
-            price: {
+            discount_percent: {
                 type: Sequelize.DECIMAL
             },
+            active: {
+                type: Sequelize.BOOLEAN
+            },
+
             createdAt: {
                 allowNull: false,
                 type: Sequelize.DATE
@@ -47,6 +38,6 @@ module.exports = {
         });
     },
     async down(queryInterface, Sequelize) {
-        await queryInterface.dropTable('Products');
+        await queryInterface.dropTable('Discounts');
     }
 };

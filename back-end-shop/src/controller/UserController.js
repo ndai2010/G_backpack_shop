@@ -1,5 +1,5 @@
 let getUser = (req, res) => {
-    return res.render('HomePage.ejs')
+    return res.render('../views/HomePage.ejs')
 }
 
 module.exports = {

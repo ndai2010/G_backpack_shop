@@ -8,7 +8,7 @@ let connect = async () => {
     }
 }
 
-const sequelize = new Sequelize('g-shop', 'root', null, {
+const sequelize = new Sequelize('travel-shop', 'root', null, {
     host: 'localhost',
     dialect: 'mysql',
     define: {
