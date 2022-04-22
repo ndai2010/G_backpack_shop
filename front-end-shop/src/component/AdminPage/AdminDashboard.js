@@ -6,6 +6,7 @@ import SideBar from "../SideBar/SideBar"
 import Widget from '../Widget/Widget'
 import Featured from '../Featured/Featured'
 import Chart from '../Chart/Chart'
+import Table from '../Tables/Table'
 class AdminDashboard extends Component {
     constructor(props) {
         super(props);
@@ -59,6 +60,10 @@ class AdminDashboard extends Component {
                     <div className='charts'>
                         <Featured />
                         <Chart />
+                    </div>
+                    <div className='list-container'>
+                        <div className='list-title'>Laster Transactions</div>
+                        <Table />
                     </div>
                 </div>
             </div>

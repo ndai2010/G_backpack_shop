@@ -2,4 +2,72 @@
     flex: 2;
     box-shadow: 2px 4px 10px 1px rgba(201, 201, 201, 0.47);
     padding: 10px;
+    .top{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        color: #999;
+        .title{
+            font-weight: 500;
+        }
+        .icon{
+            padding: 10px;
+        }
+    }
+    .bottom{
+        padding: 20px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 10px;
+        .featured-chart{
+            width: 100px;
+            height: 100px;
+        }
+        .title{
+            font-weight: 500;
+            color: #999;
+        }
+        .amount{
+            font-size: 30px;
+        }
+        .desc{
+
+            font-weight: 300;
+            font-size: 14px;
+            color: #999;
+            text-align: center;
+        }
+        .summary{
+            width: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            .item{
+                text-align: center;
+                .item-title{
+                    color: #999;
+                    font-size: 14px;
+                }
+                .item-result{
+                    display: flex;
+                    align-items: center;
+                    margin-top: 10px;
+                    font-size: 14px;
+                    
+                    &.positive{
+                        color: green;
+                    }
+                    &.negative{
+                        color: red;
+                    }
+                    .icon{
+                        padding: 5px;
+                        font-weight: bold;
+                    }
+                }
+            }
+        }
+    }
 }
