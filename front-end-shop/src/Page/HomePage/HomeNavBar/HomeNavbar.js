@@ -15,7 +15,8 @@ class HomeNavbar extends Component {
                         </div>
                     </div>
                 </div>
-                <div className='nav-tablet container'>NavTablet</div>
+                <div className='nav-tablet container'>
+                </div>
                 <div className='nav-mobie container'>Navmobi</div>
             </div>
         )
