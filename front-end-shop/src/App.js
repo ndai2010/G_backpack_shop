@@ -4,10 +4,10 @@ import { Routes, Route } from "react-router-dom"
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 
-import HomePage from "../component/HomePage/HomePage";
-import LoginPage from "../component/loginPage.js/LoginPage"
-import AdminDashboard from "../component/AdminPage/AdminDashboard";
-import ManageUser from "../component/AdminPage/Manager/ManageUser";
+import HomePage from "./Page/HomePage/HomePage";
+import LoginPage from "./Page/loginPage.js/LoginPage"
+import AdminDashboard from "./Page/AdminPage/AdminDashboard";
+import ManageUser from "./Page/AdminPage/Manager/ManageUser";
 // import ShopPage from "../component/Shop/ShopPage";
 class App extends React.Component {
   render() {

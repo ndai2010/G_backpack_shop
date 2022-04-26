@@ -40,7 +40,7 @@ class LoginPage extends Component {
                     <div className='form-box sign-in-box'>
                         <h2>Login</h2>
                         <form action=''>
-                            <div className='field active'>
+                            <div className='field'>
                                 <i className="fa-solid fa-at"></i>
                                 <input type="email" placeholder='Email ID' required></input>
                             </div>
@@ -57,16 +57,16 @@ class LoginPage extends Component {
                                 </div>
                             </div>
                             <div className='fogot-link'>
-                                <a href=''>Forgot password?</a>
+                                <a href='/'>Forgot password?</a>
                             </div>
                             <input className='submit-btn' value='login' type="submit"></input>
                         </form>
                         <div className='login-options'>
                             <p className='text'>Or, login with...</p>
                             <div className='other-logins'>
-                                <a href=''><img src={logoFb} alt=''></img></a>
-                                <a href=''><img src={logoGg} alt=''></img></a>
-                                <a href=''><img src={logoTw} alt=''></img></a>
+                                <a href='/'><img src={logoFb} alt=''></img></a>
+                                <a href='/'><img src={logoGg} alt=''></img></a>
+                                <a href='/'><img src={logoTw} alt=''></img></a>
                             </div>
                         </div>
                     </div>

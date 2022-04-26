@@ -1,12 +1,11 @@
 import React, { Component } from 'react'
-import { connect } from 'react-redux';
 import './AdminDashboard.scss'
-import NavBar from '../NavBar/NavBar'
-import SideBar from "../SideBar/SideBar"
-import Widget from '../Widget/Widget'
-import Featured from '../Featured/Featured'
-import Chart from '../Chart/Chart'
-import Table from '../Tables/Table'
+import NavBar from '../../component/NavBar/NavBar'
+import SideBar from "../../component/SideBar/SideBar"
+import Widget from '../../component/Widget/Widget'
+import Featured from '../../component/Featured/Featured'
+import Chart from '../../component/Chart/Chart'
+import Table from '../../component/Tables/Table'
 class AdminDashboard extends Component {
     constructor(props) {
         super(props);

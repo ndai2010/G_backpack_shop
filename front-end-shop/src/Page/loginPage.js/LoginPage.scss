@@ -1,76 +1,83 @@
-.login-page{
+.login-page {
     height: 100vh;
     display: flex;
     justify-content: center;
     align-items: center;
-    .form-container{
+
+    .form-container {
         display: flex;
         justify-content: center;
         align-items: center;
         position: absolute;
         transition: all 1s ease;
-        .form-box{
+
+        .form-box {
             z-index: 10;
             background: #fff;
-            box-shadow: 0 5px 25px rgb(0 0 0 / 15% );
+            box-shadow: 0 5px 25px rgb(0 0 0 / 15%);
             width: 350px;
             padding: 50px 40px;
             border-radius: 5px;
             overflow: hidden;
-            h2{
+
+            h2 {
                 font-size: 2em;
                 margin-bottom: 40px;
                 font-weight: 700;
             }
-           
-            .field{
-                display :flex;
+
+            .field {
+                display: flex;
                 justify-content: center;
                 align-items: center;
                 border-bottom: 2px solid #eee;
                 margin-bottom: 25px;
-                
-                input{
+
+                input {
                     border: none;
                     outline: none;
                     background: none;
                     flex: 1;
                     font-size: 1em;
                     padding-bottom: 5px;
-                    ::placeholder{
+
+                    ::placeholder {
                         color: #828da0;
                         font-size: 0.8em;
-                    } 
+                    }
                 }
-                i{
+
+                i {
                     color: #828da0;
                     margin-right: 10px;
                     padding-bottom: 5px;
                 }
-                .eye-btn{
+
+                .eye-btn {
                     cursor: pointer;
-                    &:hover{
-                        i{
+
+                    &:hover {
+                        i {
                             color: #0065ff;
                             transition: 0.3s ease;
                         }
                     }
                 }
             }
-            .active{
-                border-bottom: 2px solid #0065ff;
-            }
-            .fogot-link{
+
+            .fogot-link {
                 text-align: right;
                 transform: translateY(-10px);
-                i{
+
+                i {
                     color: #0065ff;
                     font-size: 0.8em;
                     text-decoration: none;
                     font-weight: 500;
                 }
             }
-            .submit-btn{
+
+            .submit-btn {
                 background: #0065ff;
                 color: #fff;
                 border: none;
@@ -83,19 +90,23 @@
                 margin-top: 5px;
                 cursor: pointer;
             }
-            .login-options{
+
+            .login-options {
                 display: flex;
                 justify-content: center;
                 align-items: center;
                 flex-direction: column;
-                .text{
+
+                .text {
                     color: #828da0;
                     font-size: 0.8em;
                     margin: 25px 0;
                 }
-                .other-logins{
+
+                .other-logins {
                     display: flex;
-                    a{
+
+                    a {
                         border: 1px solid #ccc;
                         padding: 11px 32px;
                         border-radius: 12px;
@@ -104,17 +115,20 @@
                         align-items: center;
                         margin: 0 5px;
                         transition: border 0.3s ease;
-                        &:hover{
+
+                        &:hover {
                             border: 1px solid #0065ff;
                         }
                     }
-                    img{
+
+                    img {
                         width: 20px;
                     }
                 }
             }
         }
-        .imgBox{
+
+        .imgBox {
             z-index: 9;
             display: flex;
             justify-content: center;
@@ -124,76 +138,90 @@
             box-shadow: 0 5px 25px rgb(0 0 0 / 15%);
             height: 400px;
             padding: 15px 35px;
-            img{
+
+            img {
                 max-width: 270px;
             }
-            .sliding-link{
+
+            .sliding-link {
                 display: flex;
                 font-size: 0.8em;
                 margin-bottom: 25px;
-                span{
+
+                span {
                     color: #0065ff;
                     font-weight: 600;
                     margin-left: 5px;
                     cursor: pointer;
                 }
             }
-            .sign-in-imgBox{
+
+            .sign-in-imgBox {
                 border-radius: 0 5px 5px 0;
             }
-            .sign-up-imgBox{
-                border-radius:  5px 0 0 5px ;
+
+            .sign-up-imgBox {
+                border-radius: 5px 0 0 5px;
             }
         }
     }
-    .show{
+
+    .show {
         opacity: 1;
         transform: translateX(0);
         visibility: visible;
     }
-    .hide{
+
+    .hide {
         opacity: 0;
         transform: translateX(-100%);
         visibility: hidden;
     }
 }
-@media screen and (max-width: 735px){
-    .form-container{
+
+@media screen and (max-width: 810px) {
+    .form-container {
         flex-direction: column;
         top: 0;
         overflow: hidden;
         padding: 30px;
-        .form-box{
+
+        .form-box {
             box-shadow: none;
             padding: 0;
         }
-        .img-box{
+
+        .img-box {
             box-shadow: none;
             width: 100%;
             height: auto;
             padding: 35px 35px 15px;
-            img{
+
+            img {
                 max-width: 45%;
                 min-width: 180px;
             }
         }
     }
-    .sign-up-form{
+
+    .sign-up-form {
         flex-direction: column-reverse;
     }
 }
-@media screen and (max-width: 450px){
-    .form-container{
+
+@media screen and (max-width: 450px) {
+    .form-container {
         font-size: 0.9rem;
-        .form-box{
+
+        .form-box {
             width: 100%;
         }
-    } 
+    }
 }
 
-@media screen and (max-width: 325px){
-    .other-logins{
-        a{
+@media screen and (max-width: 325px) {
+    .other-logins {
+        a {
             padding: 9px 25px;
             margin: 0 3px;
         }

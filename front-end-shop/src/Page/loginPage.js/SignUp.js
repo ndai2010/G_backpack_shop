@@ -61,7 +61,7 @@ export default class SignUp extends Component {
                             >
                             </input>
                         </div>
-                        <div className='field active'>
+                        <div className='field'>
                             <i className="uil uil-lock-access"></i>
                             <input type="password" placeholder='confirm password' required></input>
                         </div>
@@ -70,9 +70,9 @@ export default class SignUp extends Component {
                     <div className='login-options'>
                         <p className='text'>Or, sign up with...</p>
                         <div className='other-logins'>
-                            <a href=''><img src={logoFb} alt=''></img></a>
-                            <a href=''><img src={logoGg} alt=''></img></a>
-                            <a href=''><img src={logoTw} alt=''></img></a>
+                            <a href='/'><img src={logoFb} alt=''></img></a>
+                            <a href='/'><img src={logoGg} alt=''></img></a>
+                            <a href='/'><img src={logoTw} alt=''></img></a>
                         </div>
                     </div>
                 </div>
