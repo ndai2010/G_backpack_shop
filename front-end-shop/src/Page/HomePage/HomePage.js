@@ -1,9 +1,22 @@
 import React, { Component } from 'react'
+import Slide from "react-slick"
 import "./HomePage.scss"
 import HomeNavbar from "./HomeNavBar/HomeNavbar"
+import Data from "./HomeNavBar/Data"
+import Bn1 from "../../asset/Banner/bn1.jpg"
 class HomePage extends Component {
+
     render() {
+        let settings = {
+            dots: true,
+            infinite: true,
+            speed: 500,
+            slidesToShow: 1,
+            slidesToScroll: 1
+        };
+        console.log(Data.Bn);
         return (
+
             <div className='home-page'>
                 <div className='home-header'>
                     <div className='top-bar container'>
@@ -25,11 +38,15 @@ class HomePage extends Component {
                         </div>
                     </div>
                     <div className='home-navbar'><HomeNavbar /></div>
-                    <div className='slide-banner'>slide</div>
+                    <div className='slide-banner'>
+                        <Slide {...settings}>
+                            <div className='slide-banner' style={{ backgroundImage: `url(${Bn1})` }}></div>
+                        </Slide>
+                    </div>
                 </div>
                 <div className='home-body'></div>
                 <div className='home-footer'></div>
-            </div>
+            </div >
         )
     }
 }
