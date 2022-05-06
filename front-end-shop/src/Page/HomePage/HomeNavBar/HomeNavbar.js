@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 import './HomeNavbar.scss'
 import Dropdown from '../../../component/Dropdown/Dropdown'
-import { categoryDropdown } from './Data'
+import { CategoryDropdown } from './Data'
 class HomeNavbar extends Component {
     render() {
         return (
@@ -10,7 +10,7 @@ class HomeNavbar extends Component {
                     <div className='header-left'>Logo</div>
 
                     <div className='site-nav'>
-                        <Dropdown data={categoryDropdown} />
+                        <Dropdown data={CategoryDropdown} />
                     </div>
 
                     <div className='header-right'>

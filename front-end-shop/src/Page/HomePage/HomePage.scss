@@ -46,7 +46,6 @@
                             outline: none;
 
                             option {
-
                                 text-align: center;
                                 padding: 10px;
                             }
@@ -57,8 +56,109 @@
         }
 
         .slide-banner {
-            img {
-                height: 300px;
+            width: 100%;
+
+            .slick-slider {
+                position: relative;
+                overflow: hidden;
+                height: 500px;
+
+                .slide {
+                    position: relative;
+
+                    .overlay {
+                        height: 100%;
+                        width: 100%;
+                        z-index: 100;
+                        background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7));
+                        position: absolute;
+                        top: 0;
+
+                        .rs-mask-wrap {
+                            color: white;
+                        }
+                    }
+
+                    img {
+                        width: 100%;
+                    }
+                }
+
+                &:hover {
+                    .slick-arrow {
+                        opacity: 1;
+                    }
+
+                    .slick-next {
+                        right: 100px;
+                    }
+
+                    .slick-prev {
+                        left: 100px;
+                    }
+                }
+
+                .slick-arrow {
+                    position: absolute;
+                    z-index: 1;
+                    opacity: 0;
+                    transition: 1s all ease;
+
+                    &:hover {
+                        &::before {
+                            color: rebeccapurple;
+                        }
+                    }
+
+                    &::before {
+                        font-size: 40px;
+                    }
+                }
+
+                .slick-next {
+                    right: 0;
+                }
+
+                .slick-prev {
+                    left: 0;
+                }
+            }
+        }
+    }
+
+    .home-body {
+        .row-fluid {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin-top: 30px;
+            margin-bottom: 30px;
+            flex-wrap: wrap;
+
+            .wrap-fluid {
+                height: 120px;
+                flex: 1;
+                padding: 35px;
+                display: flex;
+                align-items: center;
+
+                .icon {
+                    font-size: 30px;
+                    padding: 10px 20px;
+                    color: rgb(73, 73, 77);
+                }
+
+                .title {
+                    .top-title {
+                        font-weight: 700;
+                        font-size: 18px;
+                    }
+
+                    .bot-title {
+                        color: rgb(89, 90, 90);
+                        font-size: 12px;
+                    }
+                }
             }
         }
     }

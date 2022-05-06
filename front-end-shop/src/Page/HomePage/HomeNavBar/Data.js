@@ -1,4 +1,5 @@
-const categoryDropdown = [
+
+const CategoryDropdown = [
     {
         title: "Cắm trại",
         subMenu: [
@@ -95,8 +96,19 @@ const categoryDropdown = [
         ]
     }
 ]
-
+const BanerSlide = [
+    {
+        banner: '../../../asset/Banner/bn1.jpg'
+    },
+    {
+        banner: '../../../asset/Banner/bn2.jpg'
+    },
+    {
+        banner: '../../../asset/Banner/bn3.jpg'
+    }
+]
 module.exports = {
-    categoryDropdown: categoryDropdown
+    CategoryDropdown: CategoryDropdown,
+    BanerSlide: BanerSlide
 }
 

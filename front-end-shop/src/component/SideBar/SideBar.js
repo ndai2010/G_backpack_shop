@@ -1,46 +1,71 @@
 import React, { Component } from 'react'
+import { NavLink } from 'react-router-dom'
 import './SideBar.scss'
+
 import DashboardIcon from '@mui/icons-material/Dashboard';
 import PersonIcon from '@mui/icons-material/Person';
 import StoreMallDirectoryIcon from '@mui/icons-material/StoreMallDirectory';
 import PaymentIcon from '@mui/icons-material/Payment';
 import LocalShippingIcon from '@mui/icons-material/LocalShipping';
-import InsertChartIcon from '@mui/icons-material/InsertChart';
-import NotificationsIcon from '@mui/icons-material/Notifications';
-import HealthAndSafetyIcon from '@mui/icons-material/HealthAndSafety';
-import PsychologyIcon from '@mui/icons-material/Psychology';
-import SettingsApplicationsIcon from '@mui/icons-material/SettingsApplications';
 import AccountCircleIcon from '@mui/icons-material/AccountCircle';
 import ExitToAppIcon from '@mui/icons-material/ExitToApp';
 export default class SideBar extends Component {
+    constructor(props) {
+        super(props);
+        this.state = {
+            activeIndex: 0
+        }
+    }
+    ClickTabMenu = (id, index) => {
+        this.setState({
+            activeIndex: index
+        })
+    }
     render() {
         return (
             <div className='side-bar'>
                 <div className='top'>
-                    <span className='logo'> logo</span>
+                    <span className='logo'>Admin</span>
                 </div>
                 <hr />
+
                 <div className='center'>
                     <ul>
                         <p className='title'>MAIN</p>
-                        <li><DashboardIcon className='icon' /><span>Dash Board</span></li>
+
+                        <li
+                            onClick={() => this.ClickTabMenu('DashBoard', 0)}
+                            className={this.state.activeIndex === 0 ? `active` : null}
+                        >
+                            <DashboardIcon className='icon' /><span>Dash Board</span></li>
+
                         <p className='title'>LISTS</p>
-                        <li><PersonIcon className='icon' /><span>Users</span></li>
-                        <li><StoreMallDirectoryIcon className='icon' /><span>Products</span></li>
-                        <li><PaymentIcon className='icon' /><span>Orders</span></li>
-                        <li><LocalShippingIcon className='icon' /><span>Delivery</span></li>
-                        <p className='title'>USEFULL</p>
-                        <li><InsertChartIcon className='icon' /><span>Stats</span></li>
-                        <li><NotificationsIcon className='icon' /><span>Notifications</span></li>
-                        <p className='title'>SERVICE</p>
-                        <li><HealthAndSafetyIcon className='icon' /><span>System health</span></li>
-                        <li><PsychologyIcon className='icon' /><span>Logs</span></li>
-                        <li><SettingsApplicationsIcon className='icon' /><span>Setting</span></li>
+
+                        <li
+                            onClick={() => this.ClickTabMenu('Users', 1)}
+                            className={this.state.activeIndex === 1 ? `active` : null}
+                        >
+                            <PersonIcon className='icon' /><span>Users</span></li>
+                        <li
+                            onClick={() => this.ClickTabMenu('Products', 2)}
+                            className={this.state.activeIndex === 2 ? `active` : null}
+                        ><StoreMallDirectoryIcon className='icon' /><span>Products</span></li>
+                        <li
+                            onClick={() => this.ClickTabMenu('Orders', 3)}
+                            className={this.state.activeIndex === 3 ? `active` : null}
+                        ><PaymentIcon className='icon' /><span>Orders</span></li>
+                        <li
+                            onClick={() => this.ClickTabMenu('Delivery', 4)}
+                            className={this.state.activeIndex === 4 ? `active` : null}
+                        ><LocalShippingIcon className='icon' /><span>Delivery</span></li>
+
                         <p className='title'>USER</p>
-                        <li><AccountCircleIcon className='icon' /><span>Profile</span></li>
+
+                        <li onClick={() => this.ClickTabMenu('Profile', 5)} className={this.state.activeIndex === 5 ? `active` : null}><AccountCircleIcon className='icon' /><span>Profile</span></li>
                         <li><ExitToAppIcon className='icon' /><span>Logout</span></li>
                     </ul>
                 </div>
+
                 <div className='bottom'>
                     <div className='color-option'></div>
                     <div className='color-option'></div>

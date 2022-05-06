@@ -8,7 +8,6 @@ export default class Dropdown extends Component {
         }
     }
     render() {
-        console.log(this.props.data);
         return (
             <nav className='dropdown'>
                 <ul className='list-items'>
@@ -23,9 +22,7 @@ export default class Dropdown extends Component {
                                                 {
                                                     item.subMenu && item.subMenu.length && item.subMenu.map(sub => {
                                                         return (
-
                                                             <a href={sub.pathLink} className='item'>{sub.title}</a>
-
                                                         )
                                                     })
                                                 }

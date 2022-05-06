@@ -6,9 +6,12 @@ import "slick-carousel/slick/slick-theme.css";
 
 import HomePage from "./Page/HomePage/HomePage";
 import LoginPage from "./Page/loginPage.js/LoginPage"
-import AdminDashboard from "./Page/AdminPage/AdminDashboard";
-import ManageUser from "./Page/AdminPage/Manager/ManageUser";
 // import ShopPage from "../component/Shop/ShopPage";
+import AdminPage from './Page/AdminPage/AdminPage'
+import ManageUser from './Page/AdminPage/Manage/ManageUsers'
+import ManageProduct from './Page/AdminPage/Manage/ManageProduct'
+import SideBar from "./component/SideBar/SideBar";
+
 class App extends React.Component {
   render() {
     return (
@@ -17,8 +20,9 @@ class App extends React.Component {
           <Route path="/" element={<HomePage />} />
           <Route path="/login" element={<LoginPage />} />
           <Route path="/admin">
-            <Route index element={<AdminDashboard />}></Route>
-            <Route path="users" element={<ManageUser />}></Route>
+            <Route index element={<AdminPage />}></Route>
+            <Route path="manage-users" element={<ManageUser />}></Route>
+            <Route path="manage-product" element={<ManageProduct />}></Route>
           </Route>
         </Routes>
       </Fragment>
