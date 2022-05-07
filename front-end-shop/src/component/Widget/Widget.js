@@ -1,4 +1,5 @@
 import React, { Component } from 'react'
+import { Link } from 'react-router-dom'
 import './Widget.scss'
 export default class Widget extends Component {
     constructor(props) {
@@ -17,7 +18,9 @@ export default class Widget extends Component {
                     <span className='counter'>
                         {this.props.data.isMoney && "$"} {this.state.amount}
                     </span>
-                    <span className='link'>{this.props.data.link}</span>
+                    <Link to={this.props.data.path} style={{ textDecoration: "none" }}>
+                        <span className='link'>{this.props.data.link}</span>
+                    </Link>
                 </div>
                 <div className='right'>
                     <div className='percentage positive'><i className="fa-solid fa-angle-up"></i>{this.state.diff} %</div>

@@ -1,4 +1,6 @@
 .tabs {
+    color: #555;
+
     .tabs-header {
         margin-bottom: 50px;
 
@@ -43,16 +45,19 @@
                 padding: 10px 15px;
                 text-align: center;
                 cursor: pointer;
+                color: #555;
 
                 &:hover {
                     span {
                         color: #35bdaf;
+                        border-bottom: 1px solid #35bdaf;
                     }
                 }
 
                 &:active {
                     span {
                         color: #35bdaf;
+                        border-bottom: 1px solid #35bdaf;
                     }
                 }
             }

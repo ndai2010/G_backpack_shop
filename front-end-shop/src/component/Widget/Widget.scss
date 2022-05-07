@@ -1,49 +1,60 @@
-.widget{
+.widget {
     display: flex;
     justify-content: space-between;
-    flex: 1;        
-    padding: 10px;
-    box-shadow: 2px 4px 10px 1px rgba(201, 201, 201, 0.47);
+    flex: 1;
+    padding: 15px;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
     border-radius: 10px;
-    height: 100px;
-    .left, .right{
+    height: 120px;
+
+    .left,
+    .right {
         display: flex;
         flex-direction: column;
         justify-content: space-between;
-        color: #999;
 
-        .title{
+        .title {
             font-weight: 700;
             font-size: 14px;
             text-transform: uppercase;
+            color: #999;
         }
-        .counter{
+
+        .counter {
             font-size: 25px;
             font-weight: 300;
-            color: #333;
+            color: #555;
         }
-        .link{
+
+        .link {
             width: max-content;
             font-size: 12px;
             border-bottom: 1px solid gray;
+            color: #999;
+            cursor: pointer;
         }
-        .percentage{
+
+        .percentage {
             font-size: 14px;
             display: flex;
             align-items: center;
             font-weight: 700;
-            i{
+
+            i {
                 padding: 0 10px;
             }
-            &.positive{
+
+            &.positive {
                 color: green;
             }
-            &.negative{
+
+            &.negative {
                 color: red;
             }
-            
+
         }
-        .icon{
+
+        .icon {
             padding: 5px 6px;
             font-size: 16px;
             align-self: flex-end;

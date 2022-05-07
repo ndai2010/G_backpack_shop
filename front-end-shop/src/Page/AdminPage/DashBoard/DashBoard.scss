@@ -1,0 +1,17 @@
+.dashboard {
+
+    .widgets {
+        padding: 20px;
+        display: flex;
+        gap: 20px;
+        align-items: center;
+        justify-content: space-between;
+        flex-wrap: wrap;
+    }
+
+    .charts {
+        padding: 5px 20px;
+        display: flex;
+        gap: 20px;
+    }
+}

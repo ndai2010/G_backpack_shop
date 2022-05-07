@@ -1,9 +1,11 @@
-.chart{
+.chart {
     flex: 4;
-    box-shadow: 2px 4px 10px 1px rgba(201, 201, 201, 0.47);
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
     padding: 10px;
-    color: #999;
-    .title{
+    color: #555;
+
+    .title {
         margin-bottom: 20px;
+        color: #999;
     }
 }

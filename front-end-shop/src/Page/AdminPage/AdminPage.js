@@ -1,13 +1,19 @@
-import React, { Component } from 'react';
-import SideBar from '../../component/SideBar/SideBar'
+import React, { Component, Fragment } from 'react';
 import './AdminPage.scss'
-import ManageUsers from './Manage/ManageUsers'
+import { Outlet } from 'react-router-dom'
+import SideBar from '../../component/SideBar/SideBar'
+import NavBar from '../../component/NavBar/NavBar'
 class AdminPage extends Component {
     render() {
         return (
-            <div className='admin-page'>
+            <div className='admin-main-page'>
                 <SideBar />
-                <div className='contents'>main</div>
+                <div className='main'>
+                    <div className='main-content'>
+                        <NavBar />
+                        <Outlet />
+                    </div>
+                </div>
             </div>
         );
     }

@@ -2,6 +2,7 @@
     height: 85px;
     width: 100%;
     box-shadow: 2px 4px 10px 0px rgba(201, 201, 201, 0.47);
+    color: #555;
 
     .nav-pc {
         display: flex;
@@ -33,7 +34,7 @@
 
                 &:hover {
                     .icon {
-                        color: rebeccapurple;
+                        color: #35bdaf;
                     }
                 }
             }
