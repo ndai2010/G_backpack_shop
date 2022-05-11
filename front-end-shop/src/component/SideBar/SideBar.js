@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import { Link, Location } from 'react-router-dom'
+import { Link } from 'react-router-dom'
 import './SideBar.scss'
 
 import DashboardIcon from '@mui/icons-material/Dashboard';

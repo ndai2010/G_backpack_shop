@@ -1,4 +1,4 @@
-import React, { Component, Fragment } from 'react';
+import React, { Component } from 'react';
 import './AdminPage.scss'
 import { Outlet } from 'react-router-dom'
 import SideBar from '../../component/SideBar/SideBar'

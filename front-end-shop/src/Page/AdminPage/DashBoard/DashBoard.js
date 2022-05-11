@@ -4,6 +4,7 @@ import Data from './Data'
 import Widget from '../../../component/Widget/Widget'
 import Chart from '../../../component/Chart/Chart'
 import Featured from '../../../component/Featured/Featured'
+import Table from '../../../component/Tables/Table'
 class DashBoard extends Component {
     render() {
         return (
@@ -23,7 +24,10 @@ class DashBoard extends Component {
                     <Featured />
                     <Chart />
                 </div>
-                <div className='list'></div>
+                <div className='list'>
+                    <div className="listTitle">Latest Transactions</div>
+                    <Table />
+                </div>
             </div>
         );
     }
