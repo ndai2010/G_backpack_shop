@@ -45,11 +45,11 @@ export default class SignUp extends Component {
                             <input type="email" placeholder='Email ID' required></input>
                         </div>
                         <div className='field'>
-                            <i class="fa-solid fa-user"></i>
+                            <i className="fa-solid fa-user"></i>
                             <input type="text" placeholder='Fist name' required></input>
                         </div>
                         <div className='field'>
-                            <i class="fa-solid fa-user"></i>
+                            <i className="fa-solid fa-user"></i>
                             <input type="text" placeholder='last name' required></input>
                         </div>
                         <div className='field'>

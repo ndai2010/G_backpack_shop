@@ -1,0 +1,55 @@
+.modal {
+    font-size: 14px;
+    color: #333;
+    font-weight: normal;
+
+    .header {
+        background-color: rgba(243, 246, 249);
+
+        .modal-title {
+            font-weight: 700;
+        }
+    }
+
+    .form-group {
+        .form-label {
+            font-weight: 700;
+        }
+
+        .form-control {
+            font-size: 14px;
+            font-weight: normal;
+            color: #333;
+
+            &:focus {
+                outline: none;
+                box-shadow: none;
+                border: 1px solid #ddd;
+            }
+        }
+
+        .select-group {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+
+            .select {
+                flex: 1;
+            }
+        }
+    }
+
+    .modal-footer {
+        .close-btn {
+            color: #333;
+            background-color: #eee;
+            border-color: #eee;
+        }
+
+        .add-btn {
+            color: #fff;
+            background-color: #099885;
+            border-color: #088f7d;
+        }
+    }
+}

@@ -14,7 +14,6 @@ import ManageOders from './Page/AdminPage/Manage/ManageUsers'
 import ManageDelivery from './Page/AdminPage/Manage/ManageDelivery'
 import DashBoard from './Page/AdminPage/DashBoard/DashBoard'
 import Profile from './component/Profile/Profile'
-
 class App extends React.Component {
   render() {
     return (
