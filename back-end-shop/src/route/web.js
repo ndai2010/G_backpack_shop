@@ -4,6 +4,8 @@ let router = express.Router()
 
 let webRoute = (app) => {
     router.get('/', UserController.getUser)
+
+    router.post('/login', UserController.handleLogin)
     return app.use("/", router)
 }
 
