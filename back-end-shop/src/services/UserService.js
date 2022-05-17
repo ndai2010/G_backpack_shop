@@ -99,6 +99,35 @@ let CreateNewUser = (data) => {
         }
     })
 }
+let updateUser = (data) => {
+    return new Promise(async (resolve, reject) => {
+        try {
+            let user = await db.Users.findOne({
+                where: { id: data.id },
+                raw: false
+            })
+            if (user) {
+                user.firstName = data.firstName;
+                user.lastName = data.lastName;
+                user.phone = data.phone;
+                user.gender = data.gender;
+
+                await user.save()
+                resolve({
+                    errCode: 0,
+                    message: 'update is succeed'
+                })
+            } else {
+                resolve({
+                    errCode: 1,
+                    message: 'user not found'
+                })
+            }
+        } catch (e) {
+            reject(e)
+        }
+    })
+}
 let deleteUser = (id) => {
     return new Promise(async (resolve, reject) => {
         try {
@@ -111,7 +140,9 @@ let deleteUser = (id) => {
                     message: `User isn't exist`
                 })
             } else {
-                user.destroy()
+                db.Users.destroy({
+                    where: { id: id }
+                })
                 resolve({
                     errCode: 0,
                     message: 'User is deleted'
@@ -126,5 +157,6 @@ let deleteUser = (id) => {
 module.exports = {
     handleLogin: handleLogin,
     CreateNewUser: CreateNewUser,
-    deleteUser: deleteUser
+    deleteUser: deleteUser,
+    updateUser: updateUser
 }

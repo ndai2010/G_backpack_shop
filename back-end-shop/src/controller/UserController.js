@@ -18,6 +18,11 @@ let CreateNewUser = async (req, res) => {
 
     return res.status(200).json(message)
 }
+let updateUser = async (req, res) => {
+    let data = req.body;
+    let message = await UserService.updateUser(data)
+    return res.status(200).json(message)
+}
 let deleteUser = async (req, res) => {
     let idUser = req.body.id;
     let message = await UserService.deleteUser(idUser)
@@ -27,5 +32,6 @@ module.exports = {
     getUser: getUser,
     handleLogin: handleLogin,
     CreateNewUser: CreateNewUser,
-    deleteUser: deleteUser
+    deleteUser: deleteUser,
+    updateUser: updateUser
 }
