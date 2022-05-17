@@ -15,11 +15,11 @@ module.exports = (sequelize, DataTypes) => {
         }
     }
     User_payments.init({
-        userID: Sequelize.INTEGER,
-        payment_type: Sequelize.STRING,
-        provider: Sequelize.STRING,
-        account: Sequelize.INTEGER,
-        expiry: Sequelize.DATE
+        userID: DataTypes.INTEGER,
+        payment_type: DataTypes.STRING,
+        provider: DataTypes.STRING,
+        account: DataTypes.INTEGER,
+        expiry: DataTypes.DATE
     }, {
         sequelize,
         modelName: 'User_payments',

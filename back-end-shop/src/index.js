@@ -5,7 +5,6 @@ import WebRoute from "./route/web";
 import connectDB from './config/ConnectDatabase'
 require('dotenv').config();
 let app = express();
-
 connectDB()
 
 app.use(bodyParser.json());

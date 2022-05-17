@@ -15,10 +15,10 @@ module.exports = (sequelize, DataTypes) => {
         }
     }
     Payment_Details.init({
-        orderID: Sequelize.INTEGER,
-        amount: Sequelize.INTEGER,
-        provider: Sequelize.STRING,
-        status: Sequelize.STRING
+        orderID: DataTypes.INTEGER,
+        amount: DataTypes.INTEGER,
+        provider: DataTypes.STRING,
+        status: DataTypes.STRING
     }, {
         sequelize,
         modelName: 'Payment_Details',

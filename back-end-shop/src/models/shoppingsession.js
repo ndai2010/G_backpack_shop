@@ -15,8 +15,8 @@ module.exports = (sequelize, DataTypes) => {
         }
     }
     Shopping_Session.init({
-        userID: Sequelize.STRING,
-        total: Sequelize.DECIMAL
+        userID: DataTypes.STRING,
+        total: DataTypes.DECIMAL
     }, {
         sequelize,
         modelName: 'Shopping_Session',

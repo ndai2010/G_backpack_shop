@@ -16,10 +16,6 @@ module.exports = {
                 primaryKey: true,
                 type: Sequelize.INTEGER(11)
             },
-            username: {
-                type: Sequelize.STRING,
-                allowNull: false
-            },
             password: {
                 type: Sequelize.STRING,
                 allowNull: false
@@ -40,6 +36,10 @@ module.exports = {
                 type: Sequelize.STRING
             },
             role: {
+                type: Sequelize.STRING,
+                allowNull: false
+            },
+            gender: {
                 type: Sequelize.STRING,
                 allowNull: false
             },

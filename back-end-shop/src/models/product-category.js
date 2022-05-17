@@ -15,8 +15,8 @@ module.exports = (sequelize, DataTypes) => {
         }
     }
     Product_categories.init({
-        name: Sequelize.STRING,
-        description: Sequelize.TEXT,
+        name: DataTypes.STRING,
+        description: DataTypes.TEXT,
     }, {
         sequelize,
         modelName: 'Product_categories',

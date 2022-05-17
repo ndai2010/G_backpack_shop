@@ -15,12 +15,12 @@ module.exports = (sequelize, DataTypes) => {
         }
     }
     User_Address.init({
-        userID: Sequelize.INTEGER,
-        address_line1: Sequelize.STRING,
-        address_line2: Sequelize.STRING,
-        city: Sequelize.STRING,
-        country: Sequelize.STRING,
-        phone: Sequelize.STRING
+        userID: DataTypes.INTEGER,
+        address_line1: DataTypes.STRING,
+        address_line2: DataTypes.STRING,
+        city: DataTypes.STRING,
+        country: DataTypes.STRING,
+        phone: DataTypes.STRING
     }, {
         sequelize,
         modelName: 'User_Address',

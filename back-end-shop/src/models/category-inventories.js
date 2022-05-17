@@ -15,7 +15,7 @@ module.exports = (sequelize, DataTypes) => {
         }
     }
     Category_Inventories.init({
-        quantity: Sequelize.INTEGER,
+        quantity: DataTypes.INTEGER,
     }, {
         sequelize,
         modelName: 'Category_Inventories',

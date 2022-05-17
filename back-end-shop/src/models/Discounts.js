@@ -15,10 +15,10 @@ module.exports = (sequelize, DataTypes) => {
         }
     }
     Discounts.init({
-        name: Sequelize.STRING,
-        description: Sequelize.TEXT,
-        discount_percent: Sequelize.DECIMAL,
-        active: Sequelize.BOOLEAN,
+        name: DataTypes.STRING,
+        description: DataTypes.TEXT,
+        discount_percent: DataTypes.DECIMAL,
+        active: DataTypes.BOOLEAN,
     }, {
         sequelize,
         modelName: 'Discounts',
