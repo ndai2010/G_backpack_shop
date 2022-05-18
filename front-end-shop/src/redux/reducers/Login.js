@@ -1,13 +1,8 @@
 import { EDIT_TASK, ADD_TASK, DELETE_TASK } from '../actions/Actions'
 import { toast } from 'react-toastify';
 
-export const initOpenForm = [
-    {
-        isOpen: false
-    }
-]
 // todo reducer
-export const taskReducer = (state = initOpenForm, action) => {
+export const LoginReducer = (state, action) => {
     switch (action.type) {
         case ADD_TASK:
             state = [...state, action.payload]

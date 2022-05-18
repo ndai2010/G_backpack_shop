@@ -6,13 +6,20 @@ import logoFb from '../../asset/imageIcon/facebook.png'
 import logoGg from '../../asset/imageIcon/google.png'
 import logoTw from '../../asset/imageIcon/twitter.png'
 import imgSignup from '../../asset/imageIcon/signup-img.png'
+
+import { handleLogin } from '../../services/UserServices'
 class LoginPage extends Component {
     constructor(props) {
         super(props);
         this.state = {
             fieldInput: true,
             isShowPass: false,
-            isOpenformSignUp: true
+            isOpenformSignUp: true,
+            email: '',
+            password: '',
+
+            errCode: '',
+            message: ''
         }
     }
     fieldInput = () => {
@@ -30,26 +37,53 @@ class LoginPage extends Component {
             isOpenformSignUp: !this.state.isOpenformSignUp
         })
     }
+    onChangeInput = (event, id) => {
+
+        let coppyState = { ...this.state }
+        coppyState[id] = event.target.value
+        this.setState({
+            ...coppyState
+        })
+    }
+    handleLogin = async () => {
+        try {
+
+            let data = await handleLogin(this.state.email, this.state.password)
+            if (data) {
+                this.setState({
+                    errCode: data.data.errCode,
+                    message: data.data.message
+                })
+            }
+        } catch (e) {
+            console.log(e);
+        }
+    }
     render() {
-        console.log(this.state.isOpenformSignUp);
         return (
             <div className='login-page'>
                 <div className={`form-container sign-in-form ${this.state.isOpenformSignUp ? 'show' : 'hide'}`}
-                // style={{ visibility: this.state.isOpenformSignUp ? 'visible' : 'hidden' }}
                 >
                     <div className='form-box sign-in-box'>
                         <h2>Login</h2>
                         <form action=''>
                             <div className='field'>
                                 <i className="fa-solid fa-at"></i>
-                                <input type="email" placeholder='Email ID' required></input>
+                                <input
+                                    type="email"
+                                    placeholder='Email ID'
+                                    required
+                                    value={this.state.email}
+                                    onChange={(event) => this.onChangeInput(event, 'email')}
+                                ></input>
                             </div>
                             <div className='field'>
                                 <i className="fa-solid fa-lock"></i>
                                 <input
                                     type={this.state.isShowPass ? 'text' : 'password'}
                                     placeholder='password'
-                                    required
+                                    value={this.state.password}
+                                    onChange={(event) => this.onChangeInput(event, 'password')}
                                 >
                                 </input>
                                 <div className='eye-btn' onClick={() => this.showPassword()}>
@@ -59,7 +93,7 @@ class LoginPage extends Component {
                             <div className='fogot-link'>
                                 <a href='/'>Forgot password?</a>
                             </div>
-                            <input className='submit-btn' value='login' type="submit"></input>
+                            <div className='submit-btn' onClick={() => this.handleLogin()}>Login</div>
                         </form>
                         <div className='login-options'>
                             <p className='text'>Or, login with...</p>

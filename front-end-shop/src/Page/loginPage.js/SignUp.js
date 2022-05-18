@@ -25,7 +25,6 @@ export default class SignUp extends Component {
         this.props.isOpen()
     }
     render() {
-        console.log(this.props);
         return (
             <div className={`form-container sign-up-form ${this.props.isShow ? 'hide' : 'show'}`}
             // style={{ visibility: this.props.isShow ? 'hidden' : 'visible' }}
