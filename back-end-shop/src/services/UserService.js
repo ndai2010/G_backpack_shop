@@ -99,6 +99,29 @@ let CreateNewUser = (data) => {
         }
     })
 }
+let GetAllUsers = () => {
+    return new Promise(async (resolve, reject) => {
+        try {
+            let user = await db.Users.findAll({
+                raw: true
+            })
+            if (user) {
+                resolve({
+                    errCode: 0,
+                    message: 'update is succeed',
+                    data: user
+                })
+            } else {
+                resolve({
+                    errCode: 1,
+                    message: 'user not found'
+                })
+            }
+        } catch (e) {
+            reject(e)
+        }
+    })
+}
 let updateUser = (data) => {
     return new Promise(async (resolve, reject) => {
         try {
@@ -158,5 +181,6 @@ module.exports = {
     handleLogin: handleLogin,
     CreateNewUser: CreateNewUser,
     deleteUser: deleteUser,
-    updateUser: updateUser
+    updateUser: updateUser,
+    GetAllUsers: GetAllUsers
 }

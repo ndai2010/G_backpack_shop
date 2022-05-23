@@ -8,7 +8,7 @@ let webRoute = (app) => {
 
     router.post('/login', UserController.handleLogin)
     router.post('/create-user', UserController.CreateNewUser)
-    // router.get('/all-user', UserController.CreateNewUser)
+    router.get('/all-user', UserController.GetAllUsers)
     router.put('/update-user', UserController.updateUser)
     router.delete('/delete-user', UserController.deleteUser)
     return app.use("/", router)

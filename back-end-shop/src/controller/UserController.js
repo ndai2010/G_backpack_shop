@@ -7,9 +7,7 @@ let handleLogin = async (req, res) => {
     let password = req.body.password;
 
     let userData = await UserService.handleLogin(email, password)
-    return res.status(200).json({
-        user: userData.user ? userData.user : {}
-    })
+    return res.status(200).json(userData)
 }
 let CreateNewUser = async (req, res) => {
     let data = req.body;
@@ -28,10 +26,21 @@ let deleteUser = async (req, res) => {
     let message = await UserService.deleteUser(idUser)
     return res.status(200).json(message)
 }
+let handleSignUp = async (req, res) => {
+    let data = req.body;
+    let message = await UserService.handleSignUp(data)
+    return res.status(200).json(message)
+}
+let GetAllUsers = async (req, res) => {
+    let message = await UserService.GetAllUsers()
+    return res.status(200).json(message)
+}
 module.exports = {
     getUser: getUser,
     handleLogin: handleLogin,
     CreateNewUser: CreateNewUser,
     deleteUser: deleteUser,
-    updateUser: updateUser
+    updateUser: updateUser,
+    handleSignUp: handleSignUp,
+    GetAllUsers: GetAllUsers
 }
