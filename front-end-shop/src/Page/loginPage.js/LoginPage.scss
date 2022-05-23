@@ -65,7 +65,7 @@
                 }
             }
 
-            .fogot-link {
+            .forgot-link {
                 text-align: right;
                 transform: translateY(-10px);
 
@@ -164,18 +164,6 @@
                 border-radius: 5px 0 0 5px;
             }
         }
-    }
-
-    .show {
-        opacity: 1;
-        transform: translateX(0);
-        visibility: visible;
-    }
-
-    .hide {
-        opacity: 0;
-        transform: translateX(-100%);
-        visibility: hidden;
     }
 }
 

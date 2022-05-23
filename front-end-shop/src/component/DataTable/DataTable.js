@@ -12,10 +12,10 @@ import FilterListIcon from '@mui/icons-material/FilterList';
 import DatePicker from "react-datepicker";
 import "react-datepicker/dist/react-datepicker.css";
 import Select from 'react-select'
-
+import { connect } from 'react-redux'
 //component
 import AddNewUserModal from '../Modal/AddNewUserModal';
-
+import Pagination from '../Pagination/Pagination';
 class DataTable extends Component {
     constructor(props) {
         super(props);
@@ -23,6 +23,10 @@ class DataTable extends Component {
             selectedDate: new Date(),
             selectedOption: '',
             isOpenModal: false,
+
+            list: [],
+            currentPage: 1,
+            listPerPage: 8,
         }
     }
     //data
@@ -164,21 +168,7 @@ class DataTable extends Component {
                                     </tr>
                                 </tbody>
                             </table>
-                            <div className="pagination-btn">
-                                <div className="pagination-wrap">
-                                    <span className="page-item pagination-prev" >
-                                        Previous
-                                    </span>
-                                    <div className="page-item list-page">
-                                        <span className='page'>1</span>
-                                        <span className='page'>2</span>
-                                        <span className='page'>3</span>
-                                    </div>
-                                    <span className="page-item pagination-next">
-                                        Next
-                                    </span>
-                                </div>
-                            </div>
+                            <Pagination />
                         </div>
                     </div>
                 </div >
@@ -186,5 +176,14 @@ class DataTable extends Component {
         );
     }
 }
+const mapStateToProps = (state) => {
+    return {
 
-export default DataTable;
+    }
+}
+const mapDispatchToProps = (dispatch) => {
+    return {
+
+    }
+}
+export default connect(mapStateToProps, mapDispatchToProps)(DataTable);

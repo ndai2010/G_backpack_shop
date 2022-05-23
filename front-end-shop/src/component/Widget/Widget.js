@@ -10,7 +10,6 @@ export default class Widget extends Component {
         }
     }
     render() {
-        console.log(this.props.data);
         return (
             <div className='widget'>
                 <div className='left'>
