@@ -1,13 +1,13 @@
 import * as actionTypes from '../constants'
-import { GetAllUser } from '../../services'
+import { ReadUser } from '../../services'
 
-export const UserAction = () => {
+export const UserAction = (id) => {
     return async (dispatch, getState) => {
         try {
-            let res = await GetAllUser()
+            let res = await ReadUser(id)
             if (res) {
                 dispatch({
-                    type: actionTypes.READ_ALL_USER,
+                    type: actionTypes.READ_USER,
                     payload: res.data
                 })
             }

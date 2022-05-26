@@ -16,6 +16,9 @@ import { connect } from 'react-redux'
 //component
 import AddNewUserModal from '../Modal/AddNewUserModal';
 import Pagination from '../Pagination/Pagination';
+import { UserAction } from '../../redux/actions/UserAction'
+
+
 class DataTable extends Component {
     constructor(props) {
         super(props);
@@ -23,35 +26,18 @@ class DataTable extends Component {
             selectedDate: new Date(),
             selectedOption: '',
             isOpenModal: false,
-
             list: [],
+            data: [],
             currentPage: 1,
             listPerPage: 8,
         }
     }
     //data
-    data = [
-        {
-            id: 1,
-            name: 'dai',
-            email: 'dangdai2010@gmail.com',
-            phone: '123',
-            address: 'dn',
-            status: 'pending'
-        },
-        {
-            id: 2,
-            name: 'son',
-            email: 'son1122@gmail.com',
-            phone: '1213',
-            address: 'dn',
-            status: 'active'
-        }
-    ];
+
     options = [
-        { label: 'All', value: 'option_1' },
-        { label: 'Active', value: 'option_2' },
-        { label: 'Block', value: 'option_3' },
+        { label: 'All', value: 'all' },
+        { label: 'Active', value: 'active' },
+        { label: 'Block', value: 'block' },
     ]
 
     //hàm xử lí
@@ -75,8 +61,17 @@ class DataTable extends Component {
         })
     }
 
+    componentDidMount = async () => {
+        let listUser = this.props.UserAction('all');
+        if (listUser) {
+            this.setState({
+                list: this.props.user
+            })
+        }
+    }
     //view
     render() {
+        let { list } = this.state
         return (
             <>
                 <AddNewUserModal
@@ -113,6 +108,7 @@ class DataTable extends Component {
                                 < Select
                                     onChange={(value) => this.handleOnchange(value)}
                                     options={this.options}
+                                    defaultValue='all'
                                 />
                             </div>
                             <div className='btn-filter item'>
@@ -139,33 +135,41 @@ class DataTable extends Component {
                                     </tr>
                                 </thead>
                                 <tbody className="list">
-                                    <tr>
-                                        <th scope="row">
-                                            <div className="form-check">
-                                                <input className="form-check-input" type="checkbox" name="chk_child" value="option1" />
-                                            </div>
-                                        </th>
-                                        <td className="customer_name">Timothy Smith</td>
-                                        <td className="email">timothysmith@velzon.com</td>
-                                        <td className="phone">973-277-6950</td>
-                                        <td className="date">13 Dec, 2021</td>
-                                        <td className="adress">Viet Nam</td>
-                                        <td className="status"><span>Active</span></td>
-                                        <td>
-                                            <ul className="list-inline">
-                                                <li className="list-inline-item edit" data-bs-toggle="tooltip" data-bs-trigger="hover" data-bs-placement="top" title="Edit">
-                                                    <a href="#showModal" data-bs-toggle="modal" className="text-primary d-inline-block edit-item-btn">
-                                                        <EditIcon />
-                                                    </a>
-                                                </li>
-                                                <li className="list-inline-item" data-bs-toggle="tooltip" data-bs-trigger="hover" data-bs-placement="top" title="Remove">
-                                                    <a className="text-danger d-inline-block remove-item-btn" data-bs-toggle="modal" href="#deleteRecordModal">
-                                                        <DeleteForeverIcon />
-                                                    </a>
-                                                </li>
-                                            </ul>
-                                        </td>
-                                    </tr>
+                                    {
+                                        list && list.length > 0 &&
+                                        list.map((item, index) => {
+                                            let name = `${item.firstName} ${item.lastName}`
+                                            return (
+                                                <tr >
+                                                    <th scope="row">
+                                                        <div className="form-check">
+                                                            <input className="form-check-input" type="checkbox" name="chk_child" value="option1" />
+                                                        </div>
+                                                    </th>
+                                                    <td className="customer_name">{name}</td>
+                                                    <td className="email">{item.emai}</td>
+                                                    <td className="phone">{item.phone}</td>
+                                                    <td className="date">13 Dec, 2021</td>
+                                                    <td className="adress">{item.address}</td>
+                                                    <td className="status"><span>{item.status}</span></td>
+                                                    <td>
+                                                        <ul className="list-inline">
+                                                            <li className="list-inline-item edit" data-bs-toggle="tooltip" data-bs-trigger="hover" data-bs-placement="top" title="Edit">
+                                                                <a href="#showModal" data-bs-toggle="modal" className="text-primary d-inline-block edit-item-btn">
+                                                                    <EditIcon />
+                                                                </a>
+                                                            </li>
+                                                            <li className="list-inline-item" data-bs-toggle="tooltip" data-bs-trigger="hover" data-bs-placement="top" title="Remove">
+                                                                <a className="text-danger d-inline-block remove-item-btn" data-bs-toggle="modal" href="#deleteRecordModal">
+                                                                    <DeleteForeverIcon />
+                                                                </a>
+                                                            </li>
+                                                        </ul>
+                                                    </td>
+                                                </tr>
+                                            )
+                                        })
+                                    }
                                 </tbody>
                             </table>
                             <Pagination />
@@ -178,12 +182,12 @@ class DataTable extends Component {
 }
 const mapStateToProps = (state) => {
     return {
-
+        user: state.user
     }
 }
 const mapDispatchToProps = (dispatch) => {
     return {
-
+        UserAction: (id) => dispatch(UserAction(id))
     }
 }
 export default connect(mapStateToProps, mapDispatchToProps)(DataTable);

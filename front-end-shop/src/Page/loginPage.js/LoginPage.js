@@ -1,7 +1,6 @@
 import React, { Component } from 'react'
 import "./LoginPage.scss"
 import { UserLogin } from '../../redux/actions/LoginAction'
-import { UserAction } from '../../redux/actions/UserAction'
 
 //icon-image
 import logoFb from '../../asset/imageIcon/facebook.png'
@@ -120,13 +119,11 @@ class LoginPage extends Component {
 const mapStateToProps = (state) => {
     return {
         login: state.login,
-        user: state.user
     }
 }
 const mapDispatchToProps = (dispatch) => {
     return {
         UserLogin: (email, password) => dispatch(UserLogin(email, password)),
-        UserAction: () => dispatch(UserAction())
     }
 }
 export default connect(mapStateToProps, mapDispatchToProps)(LoginPage)

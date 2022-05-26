@@ -85,8 +85,8 @@ let CreateNewUser = (data) => {
                     lastName: data.lastName,
                     phone: data.phone,
                     role: data.role,
-                    gender: data.gender
-
+                    gender: data.gender,
+                    status: 'block'
                 })
                 resolve({
                     errCode: 0,
@@ -99,24 +99,35 @@ let CreateNewUser = (data) => {
         }
     })
 }
-let GetAllUsers = () => {
+let GetAllUsers = (id) => {
     return new Promise(async (resolve, reject) => {
         try {
-            let user = await db.Users.findAll({
-                raw: true
-            })
-            if (user) {
-                resolve({
-                    errCode: 0,
-                    message: 'update is succeed',
-                    data: user
-                })
-            } else {
-                resolve({
-                    errCode: 1,
-                    message: 'user not found'
+            let user = ''
+            if (id === 'all') {
+                user = await db.Users.findAll({
+                    raw: true,
+                    attributes: {
+                        exclude: ['password']
+                    }
                 })
             }
+            if (id === 'active') {
+                user = await db.Users.findOne({
+                    where: { status: 'active' },
+                    attributes: {
+                        exclude: ['password']
+                    }
+                })
+            }
+            if (id === 'block') {
+                user = await db.Users.findOne({
+                    where: { status: 'block' },
+                    attributes: {
+                        exclude: ['password']
+                    }
+                })
+            }
+            resolve(user)
         } catch (e) {
             reject(e)
         }

@@ -1,13 +1,13 @@
 import * as actionTypes from '../constants'
 const initState = {
-    all_user: []
+    list_user: []
 }
 export const UserReducer = (state = initState, actions) => {
     switch (actions.type) {
-        case actionTypes.READ_ALL_USER:
+        case actionTypes.READ_USER:
             let item = actions.payload;
-            state.all_user = item
-            return state;
+            state.list_user = item
+            return state.list_user;
         case actionTypes.CREATE_USER:
             return state
         default:

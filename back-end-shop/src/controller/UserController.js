@@ -32,7 +32,8 @@ let handleSignUp = async (req, res) => {
     return res.status(200).json(message)
 }
 let GetAllUsers = async (req, res) => {
-    let message = await UserService.GetAllUsers()
+    let id = req.query.id
+    let message = await UserService.GetAllUsers(id)
     return res.status(200).json(message)
 }
 module.exports = {
