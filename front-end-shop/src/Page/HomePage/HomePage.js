@@ -16,6 +16,7 @@ class HomePage extends Component {
             slidesToShow: 1,
             slidesToScroll: 1
         };
+
         return (
             <div className='home-page'>
                 <div className='home-header'>
@@ -101,34 +102,40 @@ class HomePage extends Component {
                         <div className='wrap-fluid'>
                             <i className="fa-solid fa-truck icon"></i>
                             <div className='title'>
-                                <div className='top-title'>áddas</div>
-                                <span className='bottom-title'>ádsadd</span>
+                                <div className='top-title'>Free World Delivery</div>
+                                <span className='bottom-title'>Orders Over $100</span>
                             </div>
                         </div>
                         <div className='wrap-fluid'>
                             <i className="fa-solid fa-headphones-simple icon"></i>
                             <div className='title'>
-                                <div className='top-title'>áddas</div>
-                                <span className='bottom-title'>ádsadd</span>
+                                <div className='top-title'>Best Online Support</div>
+                                <span className='bottom-title'>Hours: 8AM -11PM</span>
                             </div>
                         </div>
                         <div className='wrap-fluid'>
                             <i className="fa-solid fa-piggy-bank icon"></i>
                             <div className='title'>
-                                <div className='top-title'>áddas</div>
-                                <span className='bottom-title'>ádsadd</span>
+                                <div className='top-title'>Win $100 To Shop</div>
+                                <span className='bottom-title'>Enter Now</span>
                             </div>
                         </div>
                         <div className='wrap-fluid'>
                             <i className="fa-solid fa-coins icon"></i>
                             <div className='title'>
-                                <div className='top-title'>áddas</div>
-                                <span className='bottom-title'>ádsadd</span>
+                                <div className='top-title'>Money Back Guarantee</div>
+                                <span className='bottom-title'>With A 30 Day</span>
                             </div>
                         </div>
                     </div>
-                    <div className='tab-product container' style={{ height: '500px' }}>
+                    <div className='tab-product container'>
                         <TabsProduct />
+                    </div>
+                    <div className='sale-banner container'>
+                        <div className='sale-banner content'>
+                            <div className='content-banner'></div>
+                            <div className='content-banner'></div>
+                        </div>
                     </div>
                 </div>
                 <div className='home-footer'></div>

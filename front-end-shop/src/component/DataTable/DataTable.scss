@@ -156,10 +156,20 @@
         .table-card {
             .table {
                 vertical-align: middle;
+                font-size: 12px;
+
+                .form-check-input {
+                    width: 1.5em;
+                    height: 1.5em;
+                }
+
+                .text-muted {
+                    background-color: #f3f6f9;
+                }
 
                 .list {
                     border-top: none;
-                    font-size: 14px;
+                    font-size: 12px;
                     color: #444;
                     font-weight: normal;
                 }
@@ -175,7 +185,7 @@
                     display: flex;
                     align-items: center;
                     gap: 10px;
-                    font-size: 14px;
+                    font-size: 12px;
 
                     .pagination-next,
                     .pagination-prev {

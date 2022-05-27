@@ -16,7 +16,7 @@ import { connect } from 'react-redux'
 //component
 import AddNewUserModal from '../Modal/AddNewUserModal';
 import Pagination from '../Pagination/Pagination';
-import { UserAction } from '../../redux/actions/UserAction'
+import { UserAction, DeleteUserAction } from '../../redux/actions/UserAction'
 
 
 class DataTable extends Component {
@@ -26,8 +26,6 @@ class DataTable extends Component {
             selectedDate: new Date(),
             selectedOption: '',
             isOpenModal: false,
-            list: [],
-            data: [],
             currentPage: 1,
             listPerPage: 8,
         }
@@ -69,9 +67,12 @@ class DataTable extends Component {
             })
         }
     }
+    SeleteUser = (id) => {
+        this.props.DeleteUserAction(id)
+    }
     //view
     render() {
-        let { list } = this.state
+        let { user } = this.props
         return (
             <>
                 <AddNewUserModal
@@ -136,21 +137,21 @@ class DataTable extends Component {
                                 </thead>
                                 <tbody className="list">
                                     {
-                                        list && list.length > 0 &&
-                                        list.map((item, index) => {
+                                        user && user.length > 0 &&
+                                        user.map((item, index) => {
                                             let name = `${item.firstName} ${item.lastName}`
                                             return (
-                                                <tr >
+                                                <tr key={index}>
                                                     <th scope="row">
                                                         <div className="form-check">
                                                             <input className="form-check-input" type="checkbox" name="chk_child" value="option1" />
                                                         </div>
                                                     </th>
                                                     <td className="customer_name">{name}</td>
-                                                    <td className="email">{item.emai}</td>
+                                                    <td className="email">{item.email}</td>
                                                     <td className="phone">{item.phone}</td>
                                                     <td className="date">13 Dec, 2021</td>
-                                                    <td className="adress">{item.address}</td>
+                                                    <td className="address">{item.address}</td>
                                                     <td className="status"><span>{item.status}</span></td>
                                                     <td>
                                                         <ul className="list-inline">
@@ -160,7 +161,8 @@ class DataTable extends Component {
                                                                 </a>
                                                             </li>
                                                             <li className="list-inline-item" data-bs-toggle="tooltip" data-bs-trigger="hover" data-bs-placement="top" title="Remove">
-                                                                <a className="text-danger d-inline-block remove-item-btn" data-bs-toggle="modal" href="#deleteRecordModal">
+                                                                <a className="text-danger d-inline-block remove-item-btn" data-bs-toggle="modal" href="#deleteRecordModal" onClick={() => this.SeleteUser(item.id)}>
+
                                                                     <DeleteForeverIcon />
                                                                 </a>
                                                             </li>
@@ -187,7 +189,8 @@ const mapStateToProps = (state) => {
 }
 const mapDispatchToProps = (dispatch) => {
     return {
-        UserAction: (id) => dispatch(UserAction(id))
+        UserAction: (id) => dispatch(UserAction(id)),
+        DeleteUserAction: (id) => dispatch(DeleteUserAction(id))
     }
 }
 export default connect(mapStateToProps, mapDispatchToProps)(DataTable);

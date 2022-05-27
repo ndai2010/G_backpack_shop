@@ -1,6 +1,8 @@
 import * as actionTypes from '../constants'
 const initState = {
-    list_user: []
+    list_user: [],
+    message: {},
+    deleteMessage: {}
 }
 export const UserReducer = (state = initState, actions) => {
     switch (actions.type) {
@@ -9,7 +11,13 @@ export const UserReducer = (state = initState, actions) => {
             state.list_user = item
             return state.list_user;
         case actionTypes.CREATE_USER:
-            return state
+            let message = actions.payload
+            state.message = message
+            return state.message
+        case actionTypes.DELETE_USER:
+            let deleteMessage = actions.payload
+            state.deleteMessage = deleteMessage
+            return state.deleteMessage
         default:
             return state;
     }

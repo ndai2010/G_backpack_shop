@@ -3,8 +3,9 @@ import React from 'react';
 import './AddNewUserModal.scss'
 import { Button, Modal, ModalHeader, ModalBody, ModalFooter } from 'reactstrap';
 
-
+import { connect } from 'react-redux'
 import Select from 'react-select'
+import { CreateUserAction } from '../../redux/actions/UserAction'
 
 class AddNewUserModal extends React.Component {
     constructor(props) {
@@ -49,7 +50,14 @@ class AddNewUserModal extends React.Component {
     }
 
     onClickCreate = () => {
-        console.log(this.state);
+        let data = { ...this.state }
+        this.props.CreateUser(data)
+        if (this.props.user.errCode === 0) {
+            this.toggle()
+        }
+    }
+    componentDidMount() {
+
     }
     render() {
         return (
@@ -139,5 +147,14 @@ class AddNewUserModal extends React.Component {
         );
     }
 }
-
-export default AddNewUserModal;
+const mapStateToProps = (state) => {
+    return {
+        user: state.user
+    }
+}
+const mapDispatchToProps = (dispatch) => {
+    return {
+        CreateUser: (data) => dispatch(CreateUserAction(data))
+    }
+}
+export default connect(mapStateToProps, mapDispatchToProps)(AddNewUserModal);
