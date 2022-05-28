@@ -103,6 +103,7 @@ let GetAllUsers = (id) => {
     return new Promise(async (resolve, reject) => {
         try {
             let user = ''
+            console.log(id);
             if (id === 'all') {
                 user = await db.Users.findAll({
                     raw: true,
@@ -165,6 +166,7 @@ let updateUser = (data) => {
 let deleteUser = (id) => {
     return new Promise(async (resolve, reject) => {
         try {
+            console.log('service', id);
             let user = await db.Users.findOne({
                 where: { id: id }
             })

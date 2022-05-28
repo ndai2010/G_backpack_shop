@@ -10,8 +10,7 @@ let handleLogin = async (req, res) => {
     return res.status(200).json(userData)
 }
 let CreateNewUser = async (req, res) => {
-    let data = req.body;
-
+    let data = req.body.data
     let message = await UserService.CreateNewUser(data)
 
     return res.status(200).json(message)
@@ -23,6 +22,7 @@ let updateUser = async (req, res) => {
 }
 let deleteUser = async (req, res) => {
     let idUser = req.body.id;
+    console.log(idUser);
     let message = await UserService.deleteUser(idUser)
     return res.status(200).json(message)
 }

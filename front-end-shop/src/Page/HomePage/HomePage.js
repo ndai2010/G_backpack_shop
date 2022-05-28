@@ -133,9 +133,28 @@ class HomePage extends Component {
                     </div>
                     <div className='sale-banner container'>
                         <div className='sale-banner content'>
-                            <div className='content-banner'></div>
-                            <div className='content-banner'></div>
+                            <div className='content-banner col-6 p-3'>
+                                <div className='image'>
+
+                                </div>
+                                <div className='info-banner'>
+                                    <div className='title'></div>
+                                    <div className='description'></div>
+                                </div>
+                            </div>
+                            <div className='content-banner col-6 p-3'>
+                                <div className='image'>
+
+                                </div>
+                                <div className='info-banner'>
+                                    <div className='title'></div>
+                                    <div className='description'></div>
+                                </div>
+                            </div>
                         </div>
+                    </div>
+                    <div className='list-category container'>
+                        category
                     </div>
                 </div>
                 <div className='home-footer'></div>

@@ -167,6 +167,31 @@
         .tab-product {
             margin-bottom: 40px;
         }
+
+        .sale-banner {
+            margin-bottom: 40px;
+
+            .content {
+                height: 300px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                overflow: hidden;
+
+                .content-banner {
+                    height: 100%;
+                    // width: 50%;
+
+                    .image {
+                        height: 100%;
+                        background-image: url(../../asset//traveler-man-waits-train-railway-platform.jpg);
+                        background-position: center;
+                        background-repeat: no-repeat;
+                        background-size: cover;
+                    }
+                }
+            }
+        }
     }
 }
 
