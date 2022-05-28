@@ -132,32 +132,85 @@ class HomePage extends Component {
                         <TabsProduct />
                     </div>
                     <div className='sale-banner container'>
-                        <div className='sale-banner content'>
-                            <div className='content-banner col-6 p-3'>
-                                <div className='image'>
-
+                        <div className='sale-banner layout'>
+                            <div className='layout-item'>
+                                <div className='layout-image'>
+                                    <img className='image' alt='' src='https://img.freepik.com/free-photo/hipster-red-backpack-map-forest_1150-45024.jpg?w=740&t=st=1653745107~exp=1653745707~hmac=13df1a9f321641b9d77ecd90b52a15fe114c562c3f74c65aa64c119eea515e6a'></img>
                                 </div>
-                                <div className='info-banner'>
-                                    <div className='title'></div>
-                                    <div className='description'></div>
-                                </div>
+                                <div className='description'></div>
                             </div>
-                            <div className='content-banner col-6 p-3'>
-                                <div className='image'>
-
+                            <div className='layout-item'>
+                                <div className='layout-image'>
+                                    <img className='image' alt='' src='https://img.freepik.com/free-photo/hipster-red-backpack-map-forest_1150-45024.jpg?w=740&t=st=1653745107~exp=1653745707~hmac=13df1a9f321641b9d77ecd90b52a15fe114c562c3f74c65aa64c119eea515e6a'></img>
                                 </div>
-                                <div className='info-banner'>
-                                    <div className='title'></div>
-                                    <div className='description'></div>
-                                </div>
+                                <div className='description'></div>
                             </div>
                         </div>
                     </div>
                     <div className='list-category container'>
-                        category
+                        <div className='title'>
+                            <h2>Categories</h2>
+                            <p>Exclusive products have just arrived. Check them out</p>
+                        </div>
+                        <div className='list'>
+                            <div className='layout'>
+                                <div className='layout-item'>
+                                    <img className='layout-image' alt='' src='https://img.freepik.com/free-photo/hipster-red-backpack-map-forest_1150-45024.jpg?w=740&t=st=1653745107~exp=1653745707~hmac=13df1a9f321641b9d77ecd90b52a15fe114c562c3f74c65aa64c119eea515e6a'></img>
+                                </div>
+                                <div className='layout-item'>
+                                    <img className='layout-image' alt='' src='https://img.freepik.com/free-photo/hipster-red-backpack-map-forest_1150-45024.jpg?w=740&t=st=1653745107~exp=1653745707~hmac=13df1a9f321641b9d77ecd90b52a15fe114c562c3f74c65aa64c119eea515e6a'></img>
+                                </div>
+                                <div className='layout-item'>
+                                    <img className='layout-image' alt='' src='https://img.freepik.com/free-photo/hipster-red-backpack-map-forest_1150-45024.jpg?w=740&t=st=1653745107~exp=1653745707~hmac=13df1a9f321641b9d77ecd90b52a15fe114c562c3f74c65aa64c119eea515e6a'></img>
+                                </div>
+                                <div className='layout-item'>
+                                    <img className='layout-image' alt='' src='https://img.freepik.com/free-photo/hipster-red-backpack-map-forest_1150-45024.jpg?w=740&t=st=1653745107~exp=1653745707~hmac=13df1a9f321641b9d77ecd90b52a15fe114c562c3f74c65aa64c119eea515e6a'></img>
+                                </div>
+                                <div className='layout-item'>
+                                    <img className='layout-image' alt='' src='https://img.freepik.com/free-photo/hipster-red-backpack-map-forest_1150-45024.jpg?w=740&t=st=1653745107~exp=1653745707~hmac=13df1a9f321641b9d77ecd90b52a15fe114c562c3f74c65aa64c119eea515e6a'></img>
+                                </div>
+                                <div className='layout-item'>
+                                    <img className='layout-image' alt='' src='https://img.freepik.com/free-photo/hipster-red-backpack-map-forest_1150-45024.jpg?w=740&t=st=1653745107~exp=1653745707~hmac=13df1a9f321641b9d77ecd90b52a15fe114c562c3f74c65aa64c119eea515e6a'></img>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
-                <div className='home-footer'></div>
+                <div className='home-footer'>
+                    <div className='layout'>
+                        <div className='layout-item'>
+                            <div className='information'>
+                                <h4 className='title'>Follow Us</h4>
+                                <div className='description'>
+                                    <p className='item'>08562052426</p>
+                                    <p className='item'>dangdai2010@gmail.com</p>
+                                    <p className='item'>Đà Nẵng</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div className='layout-item'>
+                            <div className='information'>
+                                <h4 className='title'>Information</h4>
+                                <div className='description'>
+                                    <p className='item'>Pagination</p>
+                                    <p className='item'>About Us</p>
+                                    <p className='item'></p>
+                                </div>
+                            </div>
+                        </div>
+                        <div className='layout-item'>
+                            <div className='information'>
+                                <h4 className='title'>Information</h4>
+                                <div className='description'>
+                                    <p className='item'>Pagination</p>
+                                    <p className='item'>About Us</p>
+                                    <p className='item'></p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div className='page-footer'></div>
+                </div>
             </div >
         )
     }
