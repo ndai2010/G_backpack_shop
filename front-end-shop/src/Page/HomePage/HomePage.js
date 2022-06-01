@@ -41,7 +41,6 @@ class HomePage extends Component {
                     <div className='home-navbar'><HomeNavbar /></div>
                     <div className='slide-banner'>
                         <Slide {...settingBanner}>
-
                             <div className='slide'>
                                 <div className='img'>
                                     <img src={bn1} alt="slide-banner" ></img>

@@ -28,6 +28,8 @@ class DataTable extends Component {
             isOpenModal: false,
             currentPage: 1,
             listPerPage: 8,
+
+            listUser: []
         }
     }
     //data
@@ -58,21 +60,28 @@ class DataTable extends Component {
             selectedDate: date
         })
     }
-
-    componentDidMount = async () => {
-        let listUser = this.props.UserAction('all');
-        if (listUser) {
+    componentDidUpdate(prevProps, prevState, snapshot) {
+        if (prevProps.user !== this.props.user) {
+            let { user } = this.props
             this.setState({
-                list: this.props.user
+                listUser: user
             })
         }
+    }
+    componentDidMount = async () => {
+        this.props.UserAction('all');
+        let { user } = this.props
+        this.setState({
+            listUser: user
+        })
+
     }
     SeleteUser = (id) => {
         this.props.DeleteUserAction(id)
     }
     //view
     render() {
-        let { user } = this.props
+        let { listUser } = this.state
         return (
             <>
                 <AddNewUserModal
@@ -137,8 +146,8 @@ class DataTable extends Component {
                                 </thead>
                                 <tbody className="list">
                                     {
-                                        user && user.length > 0 &&
-                                        user.map((item, index) => {
+                                        listUser && listUser.length > 0 &&
+                                        listUser.map((item, index) => {
                                             let name = `${item.firstName} ${item.lastName}`
                                             return (
                                                 <tr key={index}>
